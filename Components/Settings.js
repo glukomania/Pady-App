@@ -20,7 +20,6 @@ export const Settings = (props) => {
   const readStoragePad = async () => {
     try {
       await AsyncStorage.getItem("pad").then((res) => {
-        console.log("pad", res);
         res && setPade(res);
       });
     } catch (err) {
@@ -30,7 +29,6 @@ export const Settings = (props) => {
   const readStorageType = async () => {
     try {
       await AsyncStorage.getItem("type").then((res) => {
-        console.log("type", res);
         res && setType(res);
       });
     } catch (err) {
@@ -39,13 +37,11 @@ export const Settings = (props) => {
   };
 
   useEffect(() => {
-    console.log("==== Settings ======");
     readStoragePad();
     readStorageType();
   }, []);
 
   useEffect(() => {
-    console.log("something has changed", pad, type);
     setProgress({ pad: pad, type: type });
   }, [pad, type]);
 
@@ -77,6 +73,7 @@ export const Settings = (props) => {
           onPress={() => {
             clearProgressPad();
             clearProgressType();
+            props.setShouldReadStorage(true);
           }}
           style={styles.button}
         >
@@ -86,19 +83,12 @@ export const Settings = (props) => {
 
       <Pressable
         onPress={() => {
-          clearProgressPad();
+          readStoragePad();
+          readStorageType();
         }}
         style={styles.button}
       >
-        <Text
-          style={styles.buttonText}
-          onPress={() => {
-            readStoragePad();
-            readStorageType();
-          }}
-        >
-          {"Read data from storage"}
-        </Text>
+        <Text style={styles.buttonText}>{"Read data from storage"}</Text>
       </Pressable>
     </View>
   );

@@ -1,14 +1,5 @@
 import React, { useState, useCallback } from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  Pressable,
-  TouchableOpacity,
-  ScrollView,
-  FlatList,
-  Modal,
-} from "react-native";
+import { StyleSheet, Text, View, Pressable, TouchableOpacity, FlatList, Modal } from "react-native";
 import { ProgressBar } from "react-native-paper";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { colors } from "../../data/colors";
@@ -44,7 +35,6 @@ const Item = (props) => {
   };
   return (
     <TouchableOpacity onPress={onPressHandle}>
-      {console.log("Item")}
       <View
         style={{
           backgroundColor: "white",
@@ -65,18 +55,13 @@ export const LevelQuizz = (props) => {
   const [isRuleModalOpen, setIsRuleModalOpen] = useState(false);
 
   const nextHanle = useCallback(() => {
-    console.log("next pressed");
     setResult(null);
     props.setQuestionCounter(props.questionCounter + 1);
     props.onPress();
     props.setIsModalOpen(false);
-  }, [result, setResult]);
+  }, [result]);
 
   const renderIncorrectModalText = () => {
-    {
-      console.log("renderIncorrectModalText");
-    }
-
     return (
       <View
         style={{
@@ -89,7 +74,6 @@ export const LevelQuizz = (props) => {
       >
         <Pressable
           onPress={() => {
-            console.log("modal open");
             setIsRuleModalOpen(true);
           }}
         >
@@ -141,8 +125,6 @@ export const LevelQuizz = (props) => {
     const rand = Math.floor(Math.random() * motivations.length);
     return (
       <View>
-        {console.log("renderCorrectModalText")}
-
         <Text style={styles.modalCorrectText}>
           <Text>{motivations[rand]}</Text>
         </Text>
@@ -234,25 +216,23 @@ export const LevelQuizz = (props) => {
 
       <View style={styles.container}>
         <Text style={styles.question}>{props.question.sentance}</Text>
-        <ScrollView>
-          <FlatList
-            data={props.question.variants}
-            nestedScrollEnabled={true}
-            renderItem={({ item }) => (
-              <Item
-                item={item}
-                number={props.randNumber}
-                result={result}
-                setResult={setResult}
-                correct={props.question.correct}
-                setScore={props.setScore}
-                score={props.score}
-                setIsModalOpen={props.setIsModalOpen}
-              />
-            )}
-            keyExtractor={(item) => item}
-          />
-        </ScrollView>
+        <FlatList
+          data={props.question.variants}
+          nestedScrollEnabled={true}
+          renderItem={({ item }) => (
+            <Item
+              item={item}
+              number={props.randNumber}
+              result={result}
+              setResult={setResult}
+              correct={props.question.correct}
+              setScore={props.setScore}
+              score={props.score}
+              setIsModalOpen={props.setIsModalOpen}
+            />
+          )}
+          keyExtractor={(item) => item}
+        />
       </View>
     </View>
   );

@@ -40,7 +40,6 @@ export const LevelStart = (props) => {
 
     return (
       <View style={{ flex: 1, flexDirection: "row" }} key={number}>
-        {console.log("LevelStart renderPad render")}
         <View style={{ justifyContent: "center" }}>
           <Text
             style={{
@@ -64,7 +63,6 @@ export const LevelStart = (props) => {
 
   return (
     <View style={{ flex: 1, width: "100%", height: "100%" }}>
-      {console.log("LeverStarts render")}
       <View style={{ flex: 1, height: "77%", margin: "12%", alignItems: "center" }}>
         <Text style={{ color: colors.orange, fontSize: 35, fontWeight: "700", marginBottom: "3%" }}>
           České pády

@@ -12,12 +12,12 @@ const Tab = createBottomTabNavigator();
 
 export default function App() {
   const [storageProgress, setStorageProgress] = useState({ pad: 1, type: "singular" });
-  const [maxScoreToWin, setMaxScoreToWin] = useState(10);
+  const [maxScoreToWin, setMaxScoreToWin] = useState(15);
+  const [shouldReadStorage, setShouldReadStorage] = useState(false);
 
   const readStoragePad = async () => {
     try {
       await AsyncStorage.getItem("pad").then((res) => {
-        console.log("App pad", res);
         res && setStorageProgress({ type: storageProgress.type, pad: res });
       });
     } catch (err) {
@@ -27,7 +27,6 @@ export default function App() {
   const readStorageType = async () => {
     try {
       await AsyncStorage.getItem("type").then((res) => {
-        console.log("App type", res);
         res && setStorageProgress({ type: res, pad: storageProgress.pad });
       });
     } catch (err) {
@@ -40,6 +39,19 @@ export default function App() {
     readStoragePad();
     readStorageType();
   }, []);
+
+  useEffect(() => {
+    console.log("storageProgress", storageProgress);
+  }, [storageProgress]);
+
+  useEffect(() => {
+    if (shouldReadStorage) {
+      readStoragePad();
+      readStorageType();
+      console.log("re-read data");
+      setShouldReadStorage(false);
+    }
+  }, [shouldReadStorage]);
 
   return (
     <NavigationContainer>
@@ -86,6 +98,8 @@ export default function App() {
               storageProgress={storageProgress}
               maxScoreToWin={maxScoreToWin}
               setMaxScoreToWin={setMaxScoreToWin}
+              shouldReadStorage={shouldReadStorage}
+              setShouldReadStorage={setShouldReadStorage}
             />
           )}
         />

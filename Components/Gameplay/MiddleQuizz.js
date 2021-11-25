@@ -1,14 +1,5 @@
 import React, { useState, useCallback } from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  Pressable,
-  TouchableOpacity,
-  ScrollView,
-  FlatList,
-  Modal,
-} from "react-native";
+import { StyleSheet, Text, View, Pressable, TouchableOpacity, FlatList, Modal } from "react-native";
 import { ProgressBar } from "react-native-paper";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { colors } from "../../data/colors";
@@ -64,10 +55,6 @@ export const MiddleQuizz = (props) => {
   const [isRuleModalOpen, setIsRuleModalOpen] = useState(false);
 
   const nextHanle = useCallback(() => {
-    {
-      console.log("nextHanle");
-    }
-
     setResult(null);
     props.setQuestionCounter(props.questionCounter + 1);
     props.onPress();
@@ -85,7 +72,6 @@ export const MiddleQuizz = (props) => {
           width: "100%",
         }}
       >
-        {console.log("incorrect modal renders")}
         <Pressable
           onPress={() => {
             setIsRuleModalOpen(true);
@@ -139,7 +125,6 @@ export const MiddleQuizz = (props) => {
     const rand = Math.floor(Math.random() * motivations.length);
     return (
       <View>
-        {console.log("correct modal renders")}
         <Text style={styles.modalCorrectText}>
           <Text>{motivations[rand]}</Text>
         </Text>
@@ -157,7 +142,6 @@ export const MiddleQuizz = (props) => {
         width: "100%",
       }}
     >
-      {console.log("MiddleQuizze renders", props.question)}
       <View style={{ height: "8%", marginTop: "4%" }}>
         <Text style={{ fontSize: 20, color: "#ec9706", marginTop: "6%", fontWeight: "700" }}>
           {"Quizz"}
@@ -165,7 +149,7 @@ export const MiddleQuizz = (props) => {
       </View>
       <View style={{ height: "8%" }}>
         <Text style={{ fontSize: 15, color: "#ec9706", marginTop: "3%", fontWeight: "700" }}>
-          {`Až ${props.currentLevel}. pádu`}
+          {`Až ${props.currentLevel.pad}. pádu`}
         </Text>
       </View>
 
@@ -231,25 +215,23 @@ export const MiddleQuizz = (props) => {
 
       <View style={styles.container}>
         <Text style={styles.question}>{props.question.sentance}</Text>
-        <ScrollView>
-          <FlatList
-            data={props.question.variants}
-            nestedScrollEnabled={true}
-            renderItem={({ item }) => (
-              <Item
-                item={item}
-                number={props.randNumber}
-                result={result}
-                setResult={setResult}
-                correct={props.question.correct}
-                setScore={props.setScore}
-                score={props.score}
-                setIsModalOpen={props.setIsModalOpen}
-              />
-            )}
-            keyExtractor={(item) => item}
-          />
-        </ScrollView>
+        <FlatList
+          data={props.question.variants}
+          nestedScrollEnabled={true}
+          renderItem={({ item }) => (
+            <Item
+              item={item}
+              number={props.randNumber}
+              result={result}
+              setResult={setResult}
+              correct={props.question.correct}
+              setScore={props.setScore}
+              score={props.score}
+              setIsModalOpen={props.setIsModalOpen}
+            />
+          )}
+          keyExtractor={(item) => item}
+        />
       </View>
     </View>
   );

@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { StyleSheet, Text, View, Pressable } from "react-native";
 import { colors } from "../../data/colors";
+import Ionicons from "react-native-vector-icons/Ionicons";
 
 export const LevelWon = (props) => {
   const renderSumQuizz = () => {
@@ -11,11 +12,36 @@ export const LevelWon = (props) => {
             height: "89%",
             justifyContent: "center",
             alignItems: "center",
+            backgroundColor: "white",
           }}
         >
-          <View style={{ padding: "10%", flex: 1, justifyContent: "center", alignItems: "center" }}>
+          <View
+            style={{
+              height: "40%",
+              justifyContent: "flex-end",
+              marginBottom: "7%",
+            }}
+          >
+            <Ionicons name={"speedometer-outline"} size={100} color={"#e8e8e8"} />
+          </View>
+          <View
+            style={{
+              width: "100%",
+              flex: 1,
+              justifyContent: "flex-start",
+              alignItems: "center",
+              paddingBottom: "10%",
+              paddingLeft: "10%",
+              paddingRight: "10%",
+            }}
+          >
             <Text
-              style={{ color: colors.orange, fontSize: 25, fontWeight: "700", marginBottom: "10%" }}
+              style={{
+                color: colors.orange,
+                fontSize: 35,
+                fontWeight: "700",
+                marginBottom: "10%",
+              }}
             >
               Gratulujeme!
             </Text>
@@ -43,19 +69,42 @@ export const LevelWon = (props) => {
   const renderCongrats = () => {
     return (
       <View>
-        {console.log("renderCongrats")}
         <View
           style={{
             height: "89%",
             justifyContent: "center",
             alignItems: "center",
+            backgroundColor: "white",
           }}
         >
-          <View style={{ padding: "10%", flex: 1, justifyContent: "center", alignItems: "center" }}>
+          <View
+            style={{
+              height: "40%",
+              justifyContent: "flex-end",
+            }}
+          >
+            <Ionicons name={"trending-up-outline"} size={100} color={"#e8e8e8"} />
+          </View>
+          <View
+            style={{
+              width: "100%",
+              flex: 1,
+              justifyContent: "flex-start",
+              alignItems: "center",
+              paddingBottom: "10%",
+              paddingLeft: "10%",
+              paddingRight: "10%",
+            }}
+          >
             <Text
-              style={{ color: colors.orange, fontSize: 25, fontWeight: "700", marginBottom: "10%" }}
+              style={{
+                color: colors.orange,
+                fontSize: 35,
+                fontWeight: "700",
+                marginBottom: "10%",
+              }}
             >
-              Wow!
+              Skvěle to jde!
             </Text>
             <Text style={{ color: colors.textGrey, fontSize: 18 }}>
               {`${props.currentLevel.pad}. pad singulár je hotový. Jdeme na plurál ?`}
@@ -81,22 +130,53 @@ export const LevelWon = (props) => {
   const renderQuizzPassed = () => {
     return (
       <View>
-        {console.log("renderCongrats")}
         <View
           style={{
             height: "89%",
             justifyContent: "center",
             alignItems: "center",
+            backgroundColor: "white",
           }}
         >
-          <View style={{ padding: "10%", flex: 1, justifyContent: "center", alignItems: "center" }}>
+          <View
+            style={{
+              flex: 1,
+              justifyContent: "flex-end",
+            }}
+          >
+            <Ionicons name={"ribbon-outline"} size={100} color={"gold"} />
+          </View>
+          <View
+            style={{
+              width: "100%",
+              flex: 1,
+              justifyContent: "flex-start",
+              alignItems: "center",
+              paddingBottom: "10%",
+            }}
+          >
             <Text
-              style={{ color: colors.orange, fontSize: 25, fontWeight: "700", marginBottom: "10%" }}
+              style={{
+                color: colors.green,
+                fontSize: 40,
+                fontWeight: "700",
+                marginBottom: "10%",
+                paddingTop: "10%",
+              }}
             >
-              Wow!
+              Konečně!
             </Text>
-            <Text style={{ color: colors.textGrey, fontSize: 18 }}>
-              {`${props.currentLevel.pad}. pad je hotový. Jdeme na ${props.currentLevel.pad + 1} ?`}
+            <Text
+              style={{
+                color: colors.darkGrey,
+                fontSize: 18,
+                paddingLeft: "10%",
+                paddingRight: "10%",
+              }}
+            >
+              {`Teďka ${props.currentLevel.pad}. pad máte hotový. Jdeme dál na ${
+                props.currentLevel.pad + 1
+              }.?`}
             </Text>
           </View>
         </View>
@@ -108,7 +188,7 @@ export const LevelWon = (props) => {
           </View>
           <View style={{ width: "50%" }}>
             <Pressable onPress={props.onOkPress} style={styles.button}>
-              <Text style={styles.buttonText}>{"Jistě!"}</Text>
+              <Text style={styles.buttonText}>{"OK!"}</Text>
             </Pressable>
           </View>
         </View>
@@ -119,17 +199,39 @@ export const LevelWon = (props) => {
   const renderTotalWin = () => {
     return (
       <View>
-        {console.log("renderCongrats")}
         <View
           style={{
             height: "89%",
             justifyContent: "center",
             alignItems: "center",
+            backgroundColor: "white",
           }}
         >
-          <View style={{ padding: "10%", flex: 1, justifyContent: "center", alignItems: "center" }}>
+          <View
+            style={{
+              flex: 1,
+              justifyContent: "flex-end",
+            }}
+          >
+            <Ionicons name={"trophy-outline"} size={100} color={"gold"} />
+          </View>
+          <View
+            style={{
+              width: "100%",
+              flex: 1,
+              justifyContent: "flex-start",
+              alignItems: "center",
+              paddingBottom: "10%",
+            }}
+          >
             <Text
-              style={{ color: colors.orange, fontSize: 25, fontWeight: "700", marginBottom: "10%" }}
+              style={{
+                color: colors.orange,
+                fontSize: 40,
+                fontWeight: "700",
+                marginBottom: "10%",
+                paddingTop: "10%",
+              }}
             >
               Kdo by si pomyslel!
             </Text>
@@ -142,7 +244,7 @@ export const LevelWon = (props) => {
     );
   };
 
-  const renderWinScreen = () => {
+  const renderWinScreen = useCallback(() => {
     if (
       props.currentLevel.pad < 7 ||
       (props.currentLevel.pad === 7 && props.currentLevel.type === "singular")
@@ -159,14 +261,9 @@ export const LevelWon = (props) => {
     } else {
       renderTotalWin();
     }
-  };
+  }, [props.currentLevel, props.isQuizzPassed]);
 
-  return (
-    <View style={{ flex: 1 }}>
-      {console.log("LevelWon render", props.isQuizzPassed)}
-      {renderWinScreen()}
-    </View>
-  );
+  return <View style={{ flex: 1 }}>{renderWinScreen()}</View>;
 };
 
 const styles = StyleSheet.create({

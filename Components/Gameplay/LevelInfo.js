@@ -17,8 +17,6 @@ export const LevelInfo = (props) => {
         height: "100%",
       }}
     >
-      {console.log("LevelInfo render")}
-
       <View style={{ height: "8%", marginTop: "4%" }}>
         <Text style={{ fontSize: 20, color: "#ec9706", marginTop: "6%", fontWeight: "700" }}>
           {props.padName}

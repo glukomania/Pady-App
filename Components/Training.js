@@ -80,13 +80,6 @@ export const Training = (props) => {
 
     while (pastQuestions.includes(randNumber)) {
       randNumber = Math.floor(Math.random() * poolQuestions.length);
-      if (score === props.maxScoreToWin) {
-        setIsModalOpen(false);
-        setIsQuizzPassed(true);
-        console.log("PASSED!");
-        navigation.navigate("LevelWon");
-        break;
-      }
       if (pastQuestions.length === poolQuestions.length) {
         setPastQuestions([]);
       }
@@ -101,7 +94,6 @@ export const Training = (props) => {
 
   const saveProgress = () => {
     let newProgress;
-
     if (currentLevel.type === "singular") {
       newProgress = { pad: currentLevel.pad, type: "plural" };
     } else if (currentLevel.type === "plural" && currentLevel.pad < 7) {
@@ -123,6 +115,9 @@ export const Training = (props) => {
 
   useEffect(() => {
     if (score === props.maxScoreToWin) {
+      if (props.storageProgress.type === "plural") {
+        setIsQuizzPassed(true);
+      }
       setIsModalOpen(false);
       navigation.navigate("LevelWon");
     }
@@ -238,6 +233,7 @@ export const Training = (props) => {
                   setScore(0);
                   setPastQuestions([]);
                   setQuestionCounter(0);
+                  saveProgress();
                   navigation.navigate("LevelStart");
                 }}
                 isQuizzPassed={isQuizzPassed}
