@@ -157,7 +157,7 @@ export const MiddleQuizz = (props) => {
         width: "100%",
       }}
     >
-      {console.log("MiddleQuizze renders")}
+      {console.log("MiddleQuizze renders", props.question)}
       <View style={{ height: "8%", marginTop: "4%" }}>
         <Text style={{ fontSize: 20, color: "#ec9706", marginTop: "6%", fontWeight: "700" }}>
           {"Quizz"}
