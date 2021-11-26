@@ -7,6 +7,10 @@ export const examples = {
         model: "dobrý",
         variants: ["dobrý", "dobrou", "dobremu"],
         correct: "dobrý",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "krasný",
@@ -14,6 +18,10 @@ export const examples = {
         model: "dobrý",
         variants: ["krasnou", "krasnoho", "krasný"],
         correct: "krasný",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "chutné",
@@ -21,6 +29,10 @@ export const examples = {
         model: "dobrý",
         variants: ["chutný", "chutné", "chutná"],
         correct: "chutné",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "chytrý",
@@ -28,6 +40,10 @@ export const examples = {
         model: "dobrý",
         variants: ["chytrý", "chytrem", "chytreho"],
         correct: "chytrý",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "rozený",
@@ -35,6 +51,10 @@ export const examples = {
         model: "dobrý",
         variants: ["rozenou", "rozený", "rozeným"],
         correct: "rozený",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "červená",
@@ -42,6 +62,10 @@ export const examples = {
         model: "dobrá",
         variants: ["červenou", "červená", "červený"],
         correct: "červená",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "zajimavé",
@@ -49,6 +73,10 @@ export const examples = {
         model: "dobrá",
         variants: ["zajimavá", "zajimaveho", "zajimavé"],
         correct: "zajimavá",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "moderní",
@@ -56,6 +84,10 @@ export const examples = {
         model: "kvalitní",
         variants: ["moderní", "moderního", "moderná"],
         correct: "moderní",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "normalní",
@@ -63,6 +95,10 @@ export const examples = {
         model: "kvalitní",
         variants: ["normalní", "normalním", "normalný"],
         correct: "normalní",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "mezinarodní",
@@ -70,6 +106,10 @@ export const examples = {
         model: "kvalitní",
         variants: ["mezinarodná", "mezinarodný", "mezinarodní"],
         correct: "mezinarodní",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "ekologická",
@@ -77,6 +117,10 @@ export const examples = {
         model: "dobrá",
         variants: ["ekologicku", "ekologické", "ekologická"],
         correct: "ekologická",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "hezký",
@@ -84,6 +128,10 @@ export const examples = {
         model: "kvalitní",
         variants: ["hezké", "hezký", "hezkou", "hezkí", "hezká"],
         correct: "hezký",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "stará",
@@ -91,6 +139,10 @@ export const examples = {
         model: "dobrá",
         variants: ["starí", "stará", "staré"],
         correct: "stará",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "jidelní",
@@ -98,6 +150,10 @@ export const examples = {
         model: "kvalitní",
         variants: ["jidelná", "jidelním", "jidelný", "jidelní", "jidelné"],
         correct: "jidelní",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "smažený",
@@ -105,6 +161,10 @@ export const examples = {
         model: "dobrý",
         variants: ["smažené", "smažený", "smažení", "smažená"],
         correct: "smažený",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "bramborová",
@@ -112,6 +172,10 @@ export const examples = {
         model: "dobrá",
         variants: ["bramborová", "bramborový", "bramborové", "bramborovou", "bramboroví"],
         correct: "bramborová",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "hovězí",
@@ -119,6 +183,10 @@ export const examples = {
         model: "dobrý",
         variants: ["hovězý", "hovězí", "hovězé"],
         correct: "hovězí",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "světlé",
@@ -126,6 +194,10 @@ export const examples = {
         model: "dobré",
         variants: ["světlý", "světlé", "světlá"],
         correct: "světlé",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "klient",
@@ -133,6 +205,10 @@ export const examples = {
         model: "student",
         variants: ["klienta", "klient", "klientem"],
         correct: "klient",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "muž",
@@ -140,6 +216,10 @@ export const examples = {
         model: "muž",
         variants: ["muž", "muže", "mužu"],
         correct: "muž",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "učitel",
@@ -147,6 +227,10 @@ export const examples = {
         model: "student",
         variants: ["učitel", "učitelu", "učitelka"],
         correct: "učitel",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "ředitel",
@@ -154,6 +238,10 @@ export const examples = {
         model: "student",
         variants: ["ředitelu", "ředitel", "ředitelem"],
         correct: "ředitel",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "řidič",
@@ -161,6 +249,10 @@ export const examples = {
         model: "muž",
         variants: ["řidič", "řidičem", "řidiču", "řidič", "řidičům"],
         correct: "řidič",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "strom",
@@ -168,6 +260,10 @@ export const examples = {
         model: "banan",
         variants: ["stromu", "stromem", "strom"],
         correct: "strom",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "jídlo",
@@ -175,6 +271,10 @@ export const examples = {
         model: "auto",
         variants: ["jídlem", "jídlo", "jídlu"],
         correct: "jídlo",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "salat",
@@ -182,6 +282,10 @@ export const examples = {
         model: "banan",
         variants: ["salatem", "salaty", "salat"],
         correct: "salat",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "obchod",
@@ -189,6 +293,10 @@ export const examples = {
         model: "banan",
         variants: ["obchodem", "obchod", "obchoda"],
         correct: "obchod",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "klub",
@@ -196,6 +304,10 @@ export const examples = {
         model: "banan",
         variants: ["klub", "klubem", "kluba"],
         correct: "klub",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "supermarket",
@@ -203,6 +315,10 @@ export const examples = {
         model: "banan",
         variants: ["supermarketem", "supermarkete", "supermarket"],
         correct: "supermarket",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "maminka",
@@ -210,6 +326,10 @@ export const examples = {
         model: "kava",
         variants: ["maminka", "maminkou", "maminku"],
         correct: "maminka",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "škola",
@@ -217,6 +337,10 @@ export const examples = {
         model: "kava",
         variants: ["škola", "školou", "školu"],
         correct: "škola",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "kočka",
@@ -224,6 +348,10 @@ export const examples = {
         model: "kava",
         variants: ["kočku", "kočka", "kočkou"],
         correct: "kočka",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "zmrzlína",
@@ -231,6 +359,10 @@ export const examples = {
         model: "kava",
         variants: ["zmrzlína", "zmrzlínu", "zmrzlínou"],
         correct: "zmrzlína",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "voda",
@@ -238,6 +370,10 @@ export const examples = {
         model: "kava",
         variants: ["voda", "vodu", "vodou"],
         correct: "voda",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "pivo",
@@ -245,6 +381,10 @@ export const examples = {
         model: "auto",
         variants: ["pivo", "piva", "pivu"],
         correct: "pivo",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "maso",
@@ -252,6 +392,10 @@ export const examples = {
         model: "auto",
         variants: ["masa", "maso", "masem"],
         correct: "maso",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "kino",
@@ -259,6 +403,10 @@ export const examples = {
         model: "auto",
         variants: ["kino", "kina", "kin"],
         correct: "kino",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "divadlo",
@@ -266,6 +414,10 @@ export const examples = {
         model: "auto",
         variants: ["divadla", "divadlem", "divadlo"],
         correct: "divadlo",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "kolo",
@@ -273,6 +425,10 @@ export const examples = {
         model: "auto",
         variants: ["kolem", "kola", "kolo"],
         correct: "kolo",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "balet",
@@ -280,6 +436,10 @@ export const examples = {
         model: "banan",
         variants: ["balet", "baletem", "baleta"],
         correct: "balet",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "přitel",
@@ -287,6 +447,10 @@ export const examples = {
         model: "student",
         variants: ["přitelu", "přitel", "přitela"],
         correct: "přitel",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "Lukáš",
@@ -294,6 +458,10 @@ export const examples = {
         model: "muž",
         variants: ["Lukášu", "Lukáš", "Lukášem"],
         correct: "Lukáš",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "bratr",
@@ -301,6 +469,10 @@ export const examples = {
         model: "muž",
         variants: ["bratr", "bratrem", "bratra"],
         correct: "bratr",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "průvodce",
@@ -308,6 +480,10 @@ export const examples = {
         model: "soudce",
         variants: ["průvodcem", "průvodce", "průvodcu"],
         correct: "průvodce",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "příjemce",
@@ -315,6 +491,10 @@ export const examples = {
         model: "soudce",
         variants: ["příjemca", "příjemcu", "příjemce"],
         correct: "příjemce",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "strážce",
@@ -322,6 +502,10 @@ export const examples = {
         model: "soudce",
         variants: ["strážcí", "strážce", "strážcem"],
         correct: "strážce",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "stroj",
@@ -329,6 +513,10 @@ export const examples = {
         model: "čaj",
         variants: ["stroj", "strojem", "stroju"],
         correct: "stroj",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "nástroj",
@@ -336,6 +524,10 @@ export const examples = {
         model: "čaj",
         variants: ["nástroju", "nástroj", "nástrojovi"],
         correct: "nástroj",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "pokoj",
@@ -343,6 +535,10 @@ export const examples = {
         model: "čaj",
         variants: ["pokoj", "pokojum", "pokoje"],
         correct: "pokoj",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "sestřenice",
@@ -350,6 +546,10 @@ export const examples = {
         model: "restaurace",
         variants: ["sestřenicu", "sestřenice", "sestřenicou"],
         correct: "sestřenice",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "přítelkyně",
@@ -357,6 +557,10 @@ export const examples = {
         model: "restaurace",
         variants: ["přítelkyně", "přítelkyneu", "přítelkyní"],
         correct: "přítelkyně",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "televize",
@@ -364,6 +568,10 @@ export const examples = {
         model: "restaurace",
         variants: ["televizí", "televize", "televizem"],
         correct: "televize",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "ulice",
@@ -371,6 +579,10 @@ export const examples = {
         model: "restaurace",
         variants: ["ulicou", "ulica", "ulice"],
         correct: "ulice",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "galerie",
@@ -378,6 +590,10 @@ export const examples = {
         model: "restaurace",
         variants: ["galerie", "galeriem", "galeri"],
         correct: "galerie",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "věž",
@@ -385,6 +601,10 @@ export const examples = {
         model: "kancelař",
         variants: ["věž", "věžy", "věží"],
         correct: "věž",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "zeď",
@@ -392,6 +612,10 @@ export const examples = {
         model: "kancelař",
         variants: ["zeď", "zeďi", "zeďou"],
         correct: "zeď",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "skříň",
@@ -399,6 +623,10 @@ export const examples = {
         model: "kancelař",
         variants: ["skříň", "skříňem", "skříňí"],
         correct: "skříň",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "loď",
@@ -406,6 +634,10 @@ export const examples = {
         model: "kancelař",
         variants: ["loďa", "loďu", "loď"],
         correct: "loď",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "garáž",
@@ -414,6 +646,10 @@ export const examples = {
         model: "kancelař",
         variants: ["garáž", "garážu", "garáží"],
         correct: "garáž",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "moře",
@@ -421,6 +657,10 @@ export const examples = {
         model: "moře",
         variants: ["mořem", "moře", "moří"],
         correct: "moře",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "parkoviště",
@@ -428,6 +668,10 @@ export const examples = {
         model: "moře",
         variants: ["parkoviští", "parkovišteou", "parkoviště"],
         correct: "parkoviště",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "pole",
@@ -435,6 +679,10 @@ export const examples = {
         model: "moře",
         variants: ["pole", "polou", "polem"],
         correct: "pole",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "hřiště",
@@ -442,6 +690,10 @@ export const examples = {
         model: "moře",
         variants: ["hřištěm", "hřištu", "hřiště"],
         correct: "hřiště",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "koupaliště",
@@ -449,6 +701,10 @@ export const examples = {
         model: "moře",
         variants: ["koupaliští", "koupaliště", "koupalištěm"],
         correct: "koupaliště",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "kolega",
@@ -456,6 +712,10 @@ export const examples = {
         model: "kolega",
         variants: ["kolega", "kolegy", "kolegu"],
         correct: "kolega",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "Honza",
@@ -463,6 +723,10 @@ export const examples = {
         model: "kolega",
         variants: ["Honza", "Honzu", "Honzo"],
         correct: "Honza",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "starosta",
@@ -470,6 +734,10 @@ export const examples = {
         model: "kolega",
         variants: ["starosto", "starosta", "starostu", "starosti"],
         correct: "starosta",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "předseda",
@@ -477,6 +745,10 @@ export const examples = {
         model: "kolega",
         variants: ["předsedu", "předsedou", "předseda", "předsedi"],
         correct: "předseda",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "tenista",
@@ -484,6 +756,10 @@ export const examples = {
         model: "kolega",
         variants: ["tenista", "tenistou", "tenisty"],
         correct: "tenista",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "radost",
@@ -491,6 +767,10 @@ export const examples = {
         model: "místnost",
         variants: ["radosti", "radoste", "radost"],
         correct: "radost",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "příležitost",
@@ -498,6 +778,10 @@ export const examples = {
         model: "místnost",
         variants: ["příležitosti", "příležitostu", "příležitost"],
         correct: "příležitost",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "záležitost",
@@ -505,6 +789,10 @@ export const examples = {
         model: "místnost",
         variants: ["záležitost", "záležitostí", "záležitosty"],
         correct: "záležitost",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "bolest",
@@ -512,6 +800,10 @@ export const examples = {
         model: "místnost",
         variants: ["bolest", "bolestí", "bolestem"],
         correct: "bolest",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "rychlost",
@@ -519,6 +811,10 @@ export const examples = {
         model: "místnost",
         variants: ["rychlostí", "rychlosty", "rychlost"],
         correct: "rychlost",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "kuře",
@@ -526,6 +822,10 @@ export const examples = {
         model: "kuře",
         variants: ["kuřu", "kuři", "kuře"],
         correct: "kuře",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "kotě",
@@ -533,6 +833,10 @@ export const examples = {
         model: "kuře",
         variants: ["kota", "kote", "kotě"],
         correct: "kotě",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "děvče",
@@ -540,6 +844,10 @@ export const examples = {
         model: "kuře",
         variants: ["děvčí", "děvčou", "děvče"],
         correct: "děvče",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "rajče",
@@ -547,6 +855,10 @@ export const examples = {
         model: "kuře",
         variants: ["rajče", "rajčem", "rajčů"],
         correct: "rajče",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "dítě",
@@ -554,6 +866,10 @@ export const examples = {
         model: "kuře",
         variants: ["dítí", "dítě", "dítěm"],
         correct: "dítě",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "knihkupectví",
@@ -561,6 +877,10 @@ export const examples = {
         model: "nadraží",
         variants: ["knihkupectvím", "knihkupectvího", "knihkupectví"],
         correct: "knihkupectví",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "náměstí",
@@ -568,6 +888,10 @@ export const examples = {
         model: "nadraží",
         variants: ["náměstím", "náměste", "náměstí"],
         correct: "náměstí",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "přízemí",
@@ -575,6 +899,10 @@ export const examples = {
         model: "nadraží",
         variants: ["přízemí", "přízemíh", "přízemím"],
         correct: "přízemí",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "cvičení",
@@ -582,6 +910,10 @@ export const examples = {
         model: "nadraží",
         variants: ["cvičením", "cvičeni", "cvičený", "cvičení"],
         correct: "cvičení",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
       {
         word: "přísloví",
@@ -589,6 +921,10 @@ export const examples = {
         model: "nadraží",
         variants: ["příslová", "příslovi", "příslový", "přísloví"],
         correct: "přísloví",
+        rule: {
+          pad: 1,
+          type: "singular",
+        },
       },
     ],
     plural: [
@@ -598,6 +934,10 @@ export const examples = {
         model: "dobrí",
         variants: ["zajímavá", "zajímavi", "zajímavé", "zajímaví"],
         correct: ["zajímaví"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "veselý",
@@ -606,6 +946,10 @@ export const examples = {
         model: "dobrí",
         variants: ["veselí", "veseli", "veselé", "veselý"],
         correct: ["veselí"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "divný",
@@ -613,6 +957,10 @@ export const examples = {
         model: "dobrí",
         variants: ["divní", "divno", "divni", "divné"],
         correct: ["divní"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "hodný",
@@ -620,6 +968,10 @@ export const examples = {
         model: "dobrí",
         variants: ["hodní", "hodné", "hodný", "hodni"],
         correct: ["hodní"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "nemocný",
@@ -627,6 +979,10 @@ export const examples = {
         model: "dobrí",
         variants: ["nemocní", "nemocné", "nemocním"],
         correct: ["nemocní"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "nový",
@@ -634,6 +990,10 @@ export const examples = {
         model: "dobrí",
         variants: ["nová", "noví", "nové"],
         correct: ["noví"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "bohatý",
@@ -641,6 +1001,10 @@ export const examples = {
         model: "dobrí",
         variants: ["bohatý", "bohatí", "bohaté", "bohatemu"],
         correct: ["bohatí"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "vzájemný",
@@ -648,6 +1012,10 @@ export const examples = {
         model: "dobré",
         variants: ["vzájemné", "vzájemní", "vzájemni", "vzájemná"],
         correct: ["vzájemné"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "nový",
@@ -655,6 +1023,10 @@ export const examples = {
         model: "dobré",
         variants: ["Nové", "Noví", "Nová"],
         correct: ["Nové"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "historický",
@@ -662,6 +1034,10 @@ export const examples = {
         model: "dobré",
         variants: ["Historické", "Historickí", "Historická"],
         correct: ["Historické"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "turistický",
@@ -669,6 +1045,10 @@ export const examples = {
         model: "dobré",
         variants: ["turistickí", "turistické", "turistickou"],
         correct: ["turistické"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "čínský",
@@ -676,6 +1056,10 @@ export const examples = {
         model: "dobré",
         variants: ["čínské", "čínskí", "čínská"],
         correct: ["čínské"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "rychlý",
@@ -683,6 +1067,10 @@ export const examples = {
         model: "dobré",
         variants: ["rychlé", "rychlí", "rychlou"],
         correct: ["rychlé"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "husté",
@@ -690,6 +1078,10 @@ export const examples = {
         model: "dobré",
         variants: ["Hustá", "Hustí", "Husté"],
         correct: ["Husté"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "horký",
@@ -697,6 +1089,10 @@ export const examples = {
         model: "dobré",
         variants: ["Horká", "Horkí", "Hořké"],
         correct: ["Hořké"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "ovocný",
@@ -704,6 +1100,10 @@ export const examples = {
         model: "dobré",
         variants: ["Ovocná", "Ovocní", "Ovocné"],
         correct: ["Ovocné"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "rychlý",
@@ -711,6 +1111,10 @@ export const examples = {
         model: "dobré",
         variants: ["Rychlé", "Rychlí", "Rychlá"],
         correct: ["rychlé"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "rychlý",
@@ -718,6 +1122,10 @@ export const examples = {
         model: "dobrá",
         variants: ["Rychlé", "Rychla", "Rychlí", "Rychlá"],
         correct: ["Rychlá"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "ovocný",
@@ -725,6 +1133,10 @@ export const examples = {
         model: "dobrá",
         variants: ["ovocná", "ovocní", "ovocné"],
         correct: ["ovocná"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "neznámý",
@@ -732,6 +1144,10 @@ export const examples = {
         model: "dobrá",
         variants: ["Neznámá", "Neznámé", "Neznámí"],
         correct: ["Neznámá"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "Český",
@@ -739,6 +1155,10 @@ export const examples = {
         model: "dobrá",
         variants: ["České", "Česká", "Českí"],
         correct: ["Česká"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "zvláštní",
@@ -746,6 +1166,10 @@ export const examples = {
         model: "kvalitní",
         variants: ["zvláštní", "zvláštním", "zvláštního"],
         correct: ["zvláštní"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "televizní",
@@ -753,6 +1177,10 @@ export const examples = {
         model: "kvalitní",
         variants: ["televizní", "televizním", "televizního"],
         correct: ["televizní"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "školní",
@@ -760,6 +1188,10 @@ export const examples = {
         model: "kvalitní",
         variants: ["školné", "školne", "školni", "školní"],
         correct: ["školní"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "filmoví",
@@ -767,6 +1199,10 @@ export const examples = {
         model: "kvalitní",
         variants: ["filmoví", "filmové", "filmovi"],
         correct: ["filmoví"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "levnější",
@@ -774,6 +1210,10 @@ export const examples = {
         model: "kvalitní",
         variants: ["levnější", "levnějšé", "levnějši"],
         correct: ["levnější"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "zvířecí",
@@ -781,6 +1221,10 @@ export const examples = {
         model: "kvalitní",
         variants: ["Zvířecé", "Zvířecí", "Zvířeci"],
         correct: ["Zvířecí"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "cizí",
@@ -788,6 +1232,10 @@ export const examples = {
         model: "kvalitní",
         variants: ["Cizé", "Cizí", "Cizi"],
         correct: ["Cizí"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "svatební",
@@ -795,6 +1243,10 @@ export const examples = {
         model: "kvalitní",
         variants: ["svatebné", "svatební", "svatebním"],
         correct: ["svatební"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "nejvyšší",
@@ -802,6 +1254,10 @@ export const examples = {
         model: "kvalitní",
         variants: ["Nejvyšším", "Nejvyšší", "Nejvyššé"],
         correct: ["Nejvyšší"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "nejkrásnější",
@@ -809,6 +1265,10 @@ export const examples = {
         model: "kvalitní",
         variants: ["Nejkrásnějšé", "Nejkrásnější", "Nejkrásnějším"],
         correct: ["Nejkrásnější"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "první",
@@ -816,6 +1276,10 @@ export const examples = {
         model: "kvalitní",
         variants: ["První", "Prvná", "Prvné"],
         correct: ["První"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "školní",
@@ -823,6 +1287,10 @@ export const examples = {
         model: "kvalitní",
         variants: ["Školní", "Školné", "Školná"],
         correct: ["Školní"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "riskantní",
@@ -830,6 +1298,10 @@ export const examples = {
         model: "kvalitní",
         variants: ["riskantné", "riskantní", "riskantním"],
         correct: ["riskantní"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "moderní",
@@ -837,13 +1309,21 @@ export const examples = {
         model: "kvalitní",
         variants: ["Moderné", "Moderní", "Moderním"],
         correct: ["Moderní"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "poslední",
         sentance: "... otázky zodpovězeny",
         model: "kvalitní",
-        variants: ["Poslední", "Poslední", "Posledním"],
+        variants: ["Posledni", "Posledné", "Poslední"],
         correct: ["Poslední"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "nejlepší",
@@ -851,6 +1331,10 @@ export const examples = {
         model: "kvalitní",
         variants: ["Nejlepšé", "Nejlepšá", "Nejlepší"],
         correct: ["Nejlepší"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "Programátor",
@@ -858,6 +1342,10 @@ export const examples = {
         model: "studenti",
         variants: ["Programátořy", "Programátoře", "Programátoři"],
         correct: ["Programátoři"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "doktor",
@@ -865,6 +1353,10 @@ export const examples = {
         model: "studenti",
         variants: ["Doktoře", "Doktoři", "Doktořy"],
         correct: ["Doktoři"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "chlapec",
@@ -872,6 +1364,10 @@ export const examples = {
         model: "studenti",
         variants: ["chlapcy", "chlapce", "chlapci"],
         correct: ["chlapci"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "pan",
@@ -879,6 +1375,10 @@ export const examples = {
         model: "pánové",
         variants: ["pánoví", "pánem", "pánové", "pány"],
         correct: ["pánové"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "politologové",
@@ -887,6 +1387,10 @@ export const examples = {
         model: "pánové",
         variants: ["Politologové", "Politology", "Politologé"],
         correct: ["Politologové"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "bratranec",
@@ -894,6 +1398,10 @@ export const examples = {
         model: "studenti",
         variants: ["bratranci", "bratrance", "bratranec"],
         correct: ["bratranci"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "cizinec",
@@ -901,6 +1409,10 @@ export const examples = {
         model: "studenti",
         variants: ["Cizinci", "Cizincy", "Cizince"],
         correct: ["Cizinci"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "most",
@@ -908,6 +1420,10 @@ export const examples = {
         model: "banany",
         variants: ["Mosty", "Moste", "Mosti"],
         correct: ["Mosty"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "hřbitov",
@@ -915,6 +1431,10 @@ export const examples = {
         model: "banany",
         variants: ["hřbitovy", "hřbitove", "hřbitovi"],
         correct: ["hřbitovy"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "život",
@@ -922,6 +1442,10 @@ export const examples = {
         model: "banany",
         variants: ["Životi", "Životy", "Živote"],
         correct: ["Životy"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "problém",
@@ -929,6 +1453,10 @@ export const examples = {
         model: "banany",
         variants: ["Problémi", "Problémy", "Probléme"],
         correct: ["Problémy"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "vchod",
@@ -936,6 +1464,10 @@ export const examples = {
         model: "banany",
         variants: ["Vchody", "Vchodi", "Vchode"],
         correct: ["Vchody"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "knedlík",
@@ -943,6 +1475,10 @@ export const examples = {
         model: "banany",
         variants: ["knedlíky", "knedlíki", "knedlík"],
         correct: ["knedlíky"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "sestra",
@@ -950,6 +1486,10 @@ export const examples = {
         model: "kavy",
         variants: ["sestry", "sestri", "sestre"],
         correct: ["sestry"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "kamarádka",
@@ -957,6 +1497,10 @@ export const examples = {
         model: "kavy",
         variants: ["kamarádku", "kamarádka", "kamarádky"],
         correct: ["kamarádky"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "manažerka",
@@ -964,6 +1508,10 @@ export const examples = {
         model: "kavy",
         variants: ["manažerke", "manažerky", "manažerka"],
         correct: ["manažerky"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "škola",
@@ -971,6 +1519,10 @@ export const examples = {
         model: "kavy",
         variants: ["školy", "škola", "školi"],
         correct: ["školy"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "banka",
@@ -978,6 +1530,10 @@ export const examples = {
         model: "kavy",
         variants: ["Banky", "Banki", "Banka"],
         correct: ["Banky"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "lékařka",
@@ -985,6 +1541,10 @@ export const examples = {
         model: "kavy",
         variants: ["Lékařki", "Lékařka", "Lékařky"],
         correct: ["Lékařky"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "letadlo",
@@ -992,6 +1552,10 @@ export const examples = {
         model: "auta",
         variants: ["Letadla", "Letadle", "Letadly"],
         correct: ["Letadla"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "divadla",
@@ -999,6 +1563,10 @@ export const examples = {
         model: "auta",
         variants: ["divadla", "divadly", "divadle"],
         correct: ["divadla"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "město",
@@ -1006,6 +1574,10 @@ export const examples = {
         model: "auta",
         variants: ["města", "městy", "město"],
         correct: ["města"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "svetlo",
@@ -1013,6 +1585,10 @@ export const examples = {
         model: "auta",
         variants: ["Světly", "Světle", "Světla"],
         correct: ["Světla"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "jméno",
@@ -1021,6 +1597,10 @@ export const examples = {
         model: "auta",
         variants: ["jméni", "jmény", "jména"],
         correct: ["jména"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "miminko",
@@ -1028,6 +1608,10 @@ export const examples = {
         model: "auta",
         variants: ["miminka", "miminky", "miminke"],
         correct: ["miminka"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "muž",
@@ -1035,6 +1619,10 @@ export const examples = {
         model: "muži, mužové",
         variants: ["muži", "mužy", "muže", "mužové", "muží", "mužé"],
         correct: ["muži", "mužové"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "prodavač",
@@ -1042,6 +1630,10 @@ export const examples = {
         model: "muži, mužové",
         variants: ["prodavačové", "prodavače", "prodavači", "prodavačovi", "prodavačy"],
         correct: ["prodavači", "prodavačové"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "zloděj",
@@ -1049,6 +1641,10 @@ export const examples = {
         model: "soudci",
         variants: ["zloději", "zloděje", "zlodějové", "zlodějí", "zlodějé"],
         correct: ["zloději", "zlodějové"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "hráč",
@@ -1056,13 +1652,21 @@ export const examples = {
         model: "muži, mužové",
         variants: ["hráči", "hráče", "hráčí", "hráčé", "hráčové"],
         correct: ["hráči", "hráčové"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "lhář",
         sentance: "... často nenávidí ticho, proto mluví více, než je potřeba",
         model: "muži, mužové",
-        variants: ["Lháře", "Lháři", "Lháři", "Lhářové"],
+        variants: ["Lháře", "Lháři", "Lháří", "Lhářové"],
         correct: ["Lháři", "Lhářové"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "zvukař",
@@ -1070,6 +1674,10 @@ export const examples = {
         model: "muži, mužové",
         variants: ["Zvukaři", "Zvukaře", "Zvukaří"],
         correct: ["Zvukaři", "Zvukařové"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "průvodce",
@@ -1077,6 +1685,10 @@ export const examples = {
         model: "soudci, soudcové",
         variants: ["průvodce", "průvodci", "průvodcové", "průvodcí"],
         correct: ["průvodci", "průvodcové"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "dárce",
@@ -1084,6 +1696,10 @@ export const examples = {
         model: "soudci, soudcové",
         variants: ["Zvukaři", "Zvukaře", "Zvukaří"],
         correct: ["Dárci", "Dárcové"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "průvodce",
@@ -1091,6 +1707,10 @@ export const examples = {
         model: "soudci, soudcové",
         variants: ["průvodci", "průvodce", "průvodcové", , "průvodcí", "průvodcé"],
         correct: ["průvodci", "průvodcové"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "příjemce",
@@ -1098,6 +1718,10 @@ export const examples = {
         model: "soudci, soudcové",
         variants: ["Příjemcí", "Příjemce", "Příjemci", "Příjemcové"],
         correct: ["Příjemcí", "Příjemcové"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "vládce",
@@ -1105,6 +1729,10 @@ export const examples = {
         model: "soudci, soudcové",
         variants: ["vládcí", "vládcové", "vládci", "vládce"],
         correct: ["vládci", "vládcové"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "zachránce",
@@ -1112,6 +1740,10 @@ export const examples = {
         model: "soudci, soudcové",
         variants: ["zachráncové", "zachránci", "zachránce", "zachráncí", "zachráncé"],
         correct: ["zachránci", "zachráncové"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "pokoj",
@@ -1119,6 +1751,10 @@ export const examples = {
         model: "čaje",
         variants: ["pokoji", "pokojé", "pokojí", "pokoj", "pokoje"],
         correct: ["pokoje"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "nástroj",
@@ -1126,6 +1762,10 @@ export const examples = {
         model: "čaje",
         variants: ["nástroji", "nástroje", "nástrojí", "nástrojé"],
         correct: ["nástroje"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "stroj",
@@ -1133,6 +1773,10 @@ export const examples = {
         model: "čaje",
         variants: ["strojé", "strojí", "stroji", "stroje"],
         correct: ["stroje"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "orloj",
@@ -1140,6 +1784,10 @@ export const examples = {
         model: "čaje",
         variants: ["orlojí", "orloje", "orloji", "orlojé"],
         correct: ["orloje"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "Ohňostroj",
@@ -1147,13 +1795,21 @@ export const examples = {
         model: "čaje",
         variants: ["Ohňostroji", "Ohňostroje", "Ohňostrojí"],
         correct: ["Ohňostroje"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
-        word: "čapublikacej",
-        sentance: "Všechny .... Knihy je možné zakoupit přímo v Archeologickém centru",
+        word: "publikacej",
+        sentance: "Všechny .... knihy je možné zakoupit přímo v Archeologickém centru",
         model: "restaurace",
         variants: ["publikacé", "publikaci", "publikacy"],
         correct: ["publikace"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "čaj",
@@ -1161,6 +1817,10 @@ export const examples = {
         model: "čaje",
         variants: ["čaje", "čaji", "čajé", "čají"],
         correct: ["čaje"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "konference",
@@ -1168,6 +1828,10 @@ export const examples = {
         model: "restaurace",
         variants: ["konferencí", "konference", "konferenci"],
         correct: ["konference"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "nemocnice",
@@ -1175,6 +1839,10 @@ export const examples = {
         model: "restaurace",
         variants: ["nemocnice", "nemocnici", "nemocnicy"],
         correct: ["nemocnice"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "lavice",
@@ -1182,6 +1850,10 @@ export const examples = {
         model: "restaurace",
         variants: ["lavici", "lavice", "lavicy"],
         correct: ["lavice"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "dálnice",
@@ -1189,6 +1861,10 @@ export const examples = {
         model: "restaurace",
         variants: ["dálnice", "dálnici", "dálnicy"],
         correct: ["dálnice"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "tramvaj",
@@ -1196,6 +1872,10 @@ export const examples = {
         model: "kancelaře",
         variants: ["tramvaje", "tramvaji", "tramvajé"],
         correct: ["tramvaje"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "skříně",
@@ -1203,6 +1883,10 @@ export const examples = {
         model: "kancelaře",
         variants: ["skříně", "skříni", "skříní"],
         correct: ["skříně"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "čtvrť",
@@ -1210,6 +1894,10 @@ export const examples = {
         model: "kancelaře",
         variants: ["čtvrťi", "čtvrťe", "čtvrťy"],
         correct: ["čtvrťe"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "kolej",
@@ -1217,6 +1905,10 @@ export const examples = {
         model: "kancelaře",
         variants: ["kolejy", "koleji", "koleje"],
         correct: ["koleje"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "postel",
@@ -1224,6 +1916,10 @@ export const examples = {
         model: "kancelaře",
         variants: ["postelé", "postele", "postely", "posteli"],
         correct: ["postele"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "garáže",
@@ -1231,6 +1927,10 @@ export const examples = {
         model: "kancelaře",
         variants: ["garážé", "garážy", "garáže"],
         correct: ["garáže"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "sídliště",
@@ -1238,6 +1938,10 @@ export const examples = {
         model: "moře",
         variants: ["sídliště", "sídlišti", "sídliští"],
         correct: ["sídliště"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "Školné",
@@ -1245,6 +1949,10 @@ export const examples = {
         model: "moře",
         variants: ["Školne", "Školné", "Školní"],
         correct: ["Školné"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "nástupiště",
@@ -1252,6 +1960,10 @@ export const examples = {
         model: "moře",
         variants: ["nástupište", "nástupiště", "nástupišti"],
         correct: ["nástupiště"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "letiště",
@@ -1259,6 +1971,10 @@ export const examples = {
         model: "moře",
         variants: ["letiště", "letišti", "letiští"],
         correct: ["letiště"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "hřiště",
@@ -1266,6 +1982,10 @@ export const examples = {
         model: "moře",
         variants: ["hřiští", "hřiště", "hřišti"],
         correct: ["hřiště"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "koupaliště",
@@ -1273,6 +1993,10 @@ export const examples = {
         model: "moře",
         variants: ["koupaliště", "koupaliští", "koupališti"],
         correct: ["koupaliště"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "starosta",
@@ -1280,6 +2004,10 @@ export const examples = {
         model: "kolegové",
         variants: ["Starostovy", "Starostové", "Starostová"],
         correct: ["Starostové"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "monarch",
@@ -1287,6 +2015,10 @@ export const examples = {
         model: "kolegové",
         variants: ["monarchové", "monarchovi", "monarchy"],
         correct: ["monarchové"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "hrdina",
@@ -1294,6 +2026,10 @@ export const examples = {
         model: "kolegové",
         variants: ["hrdinové", "hrdiny", "hrdini"],
         correct: ["hrdinové"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "kolega",
@@ -1302,6 +2038,10 @@ export const examples = {
         model: "kolegové",
         variants: ["Kolegové", "Kolegy", "Kolegi"],
         correct: ["Kolegové"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "předseda",
@@ -1309,6 +2049,10 @@ export const examples = {
         model: "kolegové",
         variants: ["Předsedy", "Předsedi", "Předsedová"],
         correct: ["Předsedové"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "zkušenost",
@@ -1316,6 +2060,10 @@ export const examples = {
         model: "místnosti",
         variants: ["Zkušeností", "Zkušenosti", "Zkušenosty"],
         correct: ["Zkušenosti"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "nespokojenost",
@@ -1323,6 +2071,10 @@ export const examples = {
         model: "místnosti",
         variants: ["Nespokojenosti", "Nespokojeností", "Nespokojenosty"],
         correct: ["Nespokojenosti"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "možnost",
@@ -1331,6 +2083,10 @@ export const examples = {
         model: "místnosti",
         variants: ["možnosty", "možnosti", "možností"],
         correct: ["možnosti"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "žádost",
@@ -1338,6 +2094,10 @@ export const examples = {
         model: "místnosti",
         variants: ["žádostí", "žádosty", "žádosti"],
         correct: ["žádosti"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "znalost",
@@ -1345,6 +2105,10 @@ export const examples = {
         model: "místnosti",
         variants: ["znalosti", "znalostí", "znalosty"],
         correct: ["znalosti"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "povinnost",
@@ -1352,6 +2116,10 @@ export const examples = {
         model: "místnosti",
         variants: ["povinnosti", "povinností", "povinnosty"],
         correct: ["povinnosti"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "kuře",
@@ -1359,6 +2127,10 @@ export const examples = {
         model: "kuřata",
         variants: ["kuřata", "kuře", "kuří"],
         correct: ["kuřata"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "povinnost",
@@ -1366,6 +2138,10 @@ export const examples = {
         model: "kuřata",
         variants: ["koťata", "koťe", "koťi"],
         correct: ["koťata"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "děvče",
@@ -1374,6 +2150,10 @@ export const examples = {
         model: "kuřata",
         variants: ["děvčata", "děvčaty", "děvčate"],
         correct: ["děvčata"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "rajče",
@@ -1381,6 +2161,10 @@ export const examples = {
         model: "kuřata",
         variants: ["rajčaty", "rajčata", "rajče", "rajči"],
         correct: ["rajčata"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "díťata",
@@ -1388,6 +2172,10 @@ export const examples = {
         model: "kuřata",
         variants: ["díťata", "díťy", "díťate"],
         correct: ["díťata"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "zvíře",
@@ -1396,6 +2184,10 @@ export const examples = {
         model: "kuřata",
         variants: ["zvířaty", "zvířata", "zvíře"],
         correct: ["zvířata"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "vysvětlení",
@@ -1403,6 +2195,10 @@ export const examples = {
         model: "nádraží",
         variants: ["vysvětlení", "vysvětleny", "vysvětleni"],
         correct: ["vysvětlení"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "zaměstnání",
@@ -1410,6 +2206,10 @@ export const examples = {
         model: "nádraží",
         variants: ["zaměstnány", "zaměstnáni", "zaměstnání"],
         correct: ["zaměstnání"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "cestování",
@@ -1417,6 +2217,10 @@ export const examples = {
         model: "nádraží",
         variants: ["cestování", "cestováni", "cestováný"],
         correct: ["cestování"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "učení",
@@ -1424,6 +2228,10 @@ export const examples = {
         model: "nádraží",
         variants: ["učení", "učene", "učeni"],
         correct: ["učení"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
       {
         word: "zvíře",
@@ -1431,6 +2239,10 @@ export const examples = {
         model: "nádraží",
         variants: ["čekání", "čekáni", "čekány"],
         correct: ["čekání"],
+        rule: {
+          pad: 1,
+          type: "plural",
+        },
       },
     ],
   },
@@ -1442,6 +2254,10 @@ export const examples = {
         model: "toho",
         variants: ["toho", "tim", "tou"],
         correct: ["toho"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "ta",
@@ -1449,6 +2265,10 @@ export const examples = {
         model: "té",
         variants: ["té", "tu", "tou"],
         correct: ["té"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "ta",
@@ -1456,6 +2276,10 @@ export const examples = {
         model: "té",
         variants: ["té", "tou", "tá"],
         correct: ["té"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "můj",
@@ -1463,6 +2287,10 @@ export const examples = {
         model: "mého",
         variants: ["mé", "mojeho", "mého"],
         correct: ["mého"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "moji",
@@ -1470,6 +2298,10 @@ export const examples = {
         model: "moji",
         variants: ["mojeho", "moji", "mé"],
         correct: ["moji"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "David",
@@ -1477,6 +2309,10 @@ export const examples = {
         model: "studenta",
         variants: ["Davidy", "Davida", "Davide"],
         correct: ["Davida"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "programátor",
@@ -1485,6 +2321,10 @@ export const examples = {
         model: "studenta",
         variants: ["programátora", "programátore", "programátory"],
         correct: ["programátora"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "Belgičan",
@@ -1492,6 +2332,10 @@ export const examples = {
         model: "studenta",
         variants: ["Belgičana", "Belgičany", "Belgičane"],
         correct: ["Belgičana"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "odborník",
@@ -1499,6 +2343,10 @@ export const examples = {
         model: "studenta",
         variants: ["odborníka", "odborníku", "odborník"],
         correct: ["odborníka"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "voják",
@@ -1506,6 +2354,10 @@ export const examples = {
         model: "studenta",
         variants: ["vojáka", "voják", "vojáku"],
         correct: ["vojáka"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "biolog",
@@ -1513,6 +2365,10 @@ export const examples = {
         model: "studenta",
         variants: ["biolog", "biologu", "biologa"],
         correct: ["biologa"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "těžký",
@@ -1520,6 +2376,10 @@ export const examples = {
         model: "dobrého",
         variants: ["těžkého", "těžká", "těžké"],
         correct: ["těžkého"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "nemocný",
@@ -1527,6 +2387,10 @@ export const examples = {
         model: "dobrého",
         variants: ["nemocného", "nemocné", "nemocni"],
         correct: ["nemocného"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "dlouhý",
@@ -1534,6 +2398,10 @@ export const examples = {
         model: "dobré",
         variants: ["dlouhé", "dlouhy", "dlouhá"],
         correct: ["dlouhé"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "vídeňský",
@@ -1542,6 +2410,10 @@ export const examples = {
         model: "dobré",
         variants: ["vídeňské", "vídeňská", "vídeňskou"],
         correct: ["vídeňské"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "čínský",
@@ -1549,6 +2421,10 @@ export const examples = {
         model: "dobré",
         variants: ["Čínské", "Čínská", "Čínskou"],
         correct: ["Čínské"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "zmrzlinový",
@@ -1556,6 +2432,10 @@ export const examples = {
         model: "dobré",
         variants: ["zmrzlinovou", "zmrzlinové", "zmrzlinová"],
         correct: ["zmrzlinové"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "vídeňský",
@@ -1563,6 +2443,10 @@ export const examples = {
         model: "dobrého",
         variants: ["vídeňského", "vídeňská", "vídeňské"],
         correct: ["vídeňského"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "mateřského",
@@ -1570,6 +2454,10 @@ export const examples = {
         model: "dobrého",
         variants: ["mateřského", "mateřské", "mateřská"],
         correct: ["mateřského"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "neznámý",
@@ -1577,6 +2465,10 @@ export const examples = {
         model: "dobrého",
         variants: ["neznámé", "neznámého", "neznámý"],
         correct: ["neznámého"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "poslušný",
@@ -1584,6 +2476,10 @@ export const examples = {
         model: "dobrého",
         variants: ["poslušného", "poslušnému", "poslušneho"],
         correct: ["poslušného"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "rodinný",
@@ -1591,6 +2487,10 @@ export const examples = {
         model: "dobrého",
         variants: ["rodinné", "rodinneho", "rodinného"],
         correct: ["rodinného"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "bohatý",
@@ -1598,6 +2498,10 @@ export const examples = {
         model: "dobrého",
         variants: ["bohatého", "bohaté", "bohateho"],
         correct: ["bohatého"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "levnější",
@@ -1605,6 +2509,10 @@ export const examples = {
         model: "kvalitní",
         variants: ["levnější", "levnějšého", "levnějším"],
         correct: ["levnější"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "levnější",
@@ -1612,6 +2520,10 @@ export const examples = {
         model: "kvalitního",
         variants: ["největšího", "největším", "největší"],
         correct: ["největšího"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "slavnostního",
@@ -1619,6 +2531,10 @@ export const examples = {
         model: "kvalitního",
         variants: ["slavnostního", "slavnostní"],
         correct: ["slavnostního"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "vánoční",
@@ -1626,6 +2542,10 @@ export const examples = {
         model: "kvalitního",
         variants: ["vánočního", "vánočné", "vánoční"],
         correct: ["vánočního"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "rizikový",
@@ -1634,6 +2554,10 @@ export const examples = {
         model: "dobrého",
         variants: ["rizikového", "rizikoveho", "rizikové"],
         correct: ["rizikového"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "poslední",
@@ -1642,6 +2566,10 @@ export const examples = {
         model: "kvalitního",
         variants: ["posledneho", "poslední", "posledního"],
         correct: ["posledního"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "jazyk",
@@ -1649,6 +2577,10 @@ export const examples = {
         model: "lesa",
         variants: ["jazyka", "jazykem", "jazyku"],
         correct: ["jazyka"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "slovník",
@@ -1656,6 +2588,10 @@ export const examples = {
         model: "bananu",
         variants: ["slovníku", "slovníka", "slovník"],
         correct: ["slovníku"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "výtah",
@@ -1663,6 +2599,10 @@ export const examples = {
         model: "bananu",
         variants: ["výtah", "výtahua", "výtahu"],
         correct: ["výtahu"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "stadion",
@@ -1670,6 +2610,10 @@ export const examples = {
         model: "bananu",
         variants: ["stadionu", "stadion", "stadiona"],
         correct: ["stadionu"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "motor",
@@ -1677,6 +2621,10 @@ export const examples = {
         model: "bananu",
         variants: ["motoru", "motora", "motor"],
         correct: ["motoru"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "sklep",
@@ -1684,6 +2632,10 @@ export const examples = {
         model: "lesa",
         variants: ["sklepa", "sklepu", "sklep"],
         correct: ["sklepa"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "kostel",
@@ -1691,6 +2643,10 @@ export const examples = {
         model: "lesa",
         variants: ["kostela", "kostelu", "kostele"],
         correct: ["kostela"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "hřbitov",
@@ -1698,6 +2654,10 @@ export const examples = {
         model: "lesa",
         variants: ["hřbitova", "hřbitove", "hřbitovi"],
         correct: ["hřbitova"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "sestra",
@@ -1705,6 +2665,10 @@ export const examples = {
         model: "kavy",
         variants: ["sestry", "sestre", "sestri"],
         correct: ["sestry"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "škola",
@@ -1712,6 +2676,10 @@ export const examples = {
         model: "kavy",
         variants: ["školi", "škole", "školy", "škola"],
         correct: ["školy"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "Anna",
@@ -1719,6 +2687,10 @@ export const examples = {
         model: "kavy",
         variants: ["Anny", "Anne", "Annu"],
         correct: ["Anny"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "univerzita",
@@ -1726,6 +2698,10 @@ export const examples = {
         model: "kavy",
         variants: ["univerzita", "univerzitu", "univerzity"],
         correct: ["univerzity"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "sleva",
@@ -1733,6 +2709,10 @@ export const examples = {
         model: "kavy",
         variants: ["sleva", "slevu", "slevy"],
         correct: ["slevy"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "pošta",
@@ -1740,6 +2720,10 @@ export const examples = {
         model: "kavy",
         variants: ["pošty", "pošta", "pošti"],
         correct: ["pošty"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "kino",
@@ -1748,6 +2732,10 @@ export const examples = {
         model: "auto",
         variants: ["kina", "kiny", "kin"],
         correct: ["kina"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "ministerstvo",
@@ -1756,6 +2744,10 @@ export const examples = {
         model: "auto",
         variants: ["ministerstvi", "ministerstva", "ministerstvy"],
         correct: ["ministerstva"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "miminko",
@@ -1763,6 +2755,10 @@ export const examples = {
         model: "auto",
         variants: ["miminki", "miminky", "miminka"],
         correct: ["miminka"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "mýdlo",
@@ -1770,6 +2766,10 @@ export const examples = {
         model: "auto",
         variants: ["mýdlu", "mýdly", "mýdla"],
         correct: ["mýdla"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "zrcadlo",
@@ -1777,13 +2777,21 @@ export const examples = {
         model: "auto",
         variants: ["zrcadla", "zrcadly", "zrcadle"],
         correct: ["zrcadla"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
-        word: "pošta",
+        word: "dřevo",
         sentance: "Výrobky z ... můžete zakoupit u nás ",
         model: "auto",
         variants: ["dřevy", "dřeva", "dřeve"],
         correct: ["dřeva"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "prodavač",
@@ -1791,6 +2799,10 @@ export const examples = {
         model: "muže",
         variants: ["prodavače", "prodavačé", "prodavači"],
         correct: ["prodavače"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "lékař",
@@ -1798,6 +2810,10 @@ export const examples = {
         model: "muže",
         variants: ["lékaři", "lékařa", "lékaře"],
         correct: ["lékaře"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "elektrikář",
@@ -1805,6 +2821,10 @@ export const examples = {
         model: "muže",
         variants: ["elektrikáře", "elektrikářa", "elektrikáři"],
         correct: ["elektrikáře"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "pekař",
@@ -1812,6 +2832,10 @@ export const examples = {
         model: "muže",
         variants: ["pekařa", "pekaři", "pekaře"],
         correct: ["pekaře"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "zvukař",
@@ -1819,6 +2843,10 @@ export const examples = {
         model: "muže",
         variants: ["zvukaře", "zvukařa", "zvukaři"],
         correct: ["zvukaře"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "hasič",
@@ -1827,6 +2855,10 @@ export const examples = {
         model: "muže",
         variants: ["hasiče", "hasiča", "hasiči"],
         correct: ["hasiče"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "správce",
@@ -1834,6 +2866,10 @@ export const examples = {
         model: "soudce",
         variants: ["správce", "správca", "správcu"],
         correct: ["správce"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "dárce",
@@ -1841,6 +2877,10 @@ export const examples = {
         model: "soudce",
         variants: ["dárce", "dárcé", "dárca"],
         correct: ["dárce"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "průvodce",
@@ -1848,6 +2888,10 @@ export const examples = {
         model: "soudce",
         variants: ["průvodce", "průvodca", "průvodci"],
         correct: ["průvodce"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "strážce",
@@ -1856,6 +2900,10 @@ export const examples = {
         model: "soudce",
         variants: ["strážca", "strážce", "strážci"],
         correct: ["strážce"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "zachránce",
@@ -1863,6 +2911,10 @@ export const examples = {
         model: "soudce",
         variants: ["zachránce", "zachránci", "zachránca"],
         correct: ["zachránce"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "spisovatel",
@@ -1871,6 +2923,10 @@ export const examples = {
         model: "soudce",
         variants: ["spisovatele", "spisovatela", "spisovateli"],
         correct: ["spisovatele"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "pokoj",
@@ -1878,6 +2934,10 @@ export const examples = {
         model: "čaje",
         variants: ["pokoje", "pokoji", "pokoju"],
         correct: ["pokoje"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "nástroj",
@@ -1885,6 +2945,10 @@ export const examples = {
         model: "čaje",
         variants: ["nástroje", "nástroja", "nástroju"],
         correct: ["nástroje"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "stroj",
@@ -1892,6 +2956,10 @@ export const examples = {
         model: "čaje",
         variants: ["stroje", "stroju", "stroja"],
         correct: ["stroje"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "orloj",
@@ -1900,6 +2968,10 @@ export const examples = {
         model: "čaje",
         variants: ["orloja", "orloji", "orloje"],
         correct: ["orloje"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "ohňostroj",
@@ -1907,6 +2979,10 @@ export const examples = {
         model: "čaje",
         variants: ["ohňostroji", "ohňostroje", "ohňostroju"],
         correct: ["ohňostroje"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "čaj",
@@ -1914,6 +2990,10 @@ export const examples = {
         model: "čaje",
         variants: ["čaje", "čaja", "čaju"],
         correct: ["čaje"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "televize",
@@ -1921,6 +3001,10 @@ export const examples = {
         model: "restaurace",
         variants: ["televizí", "televize", "televizi"],
         correct: ["televize"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "nemocnice",
@@ -1928,6 +3012,10 @@ export const examples = {
         model: "restaurace",
         variants: ["nemocnice", "nemocnici", "nemocnicí"],
         correct: ["nemocnice"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "recepce",
@@ -1935,6 +3023,10 @@ export const examples = {
         model: "restaurace",
         variants: ["recepca", "recepci", "recepce"],
         correct: ["recepce"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "dálnice",
@@ -1942,6 +3034,10 @@ export const examples = {
         model: "restaurace",
         variants: ["dálnicé", "dálnice", "dálnici"],
         correct: ["dálnice"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "investice",
@@ -1949,6 +3045,10 @@ export const examples = {
         model: "restaurace",
         variants: ["investici", "investic", "investice"],
         correct: ["investice"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "hranice",
@@ -1956,6 +3056,10 @@ export const examples = {
         model: "restaurace",
         variants: ["hranicí", "hranice", "hranici"],
         correct: ["hranice"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "garáž",
@@ -1963,6 +3067,10 @@ export const examples = {
         model: "kancelaře",
         variants: ["garáža", "garáže", "garáži"],
         correct: ["garáže"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "tramvaje",
@@ -1970,6 +3078,10 @@ export const examples = {
         model: "kancelaře",
         variants: ["tramvaje", "tramvaju", "tramvaja"],
         correct: ["tramvaje"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "formulář",
@@ -1977,6 +3089,10 @@ export const examples = {
         model: "kancelaře",
         variants: ["formuláře", "formuláři", "formulářa"],
         correct: ["formuláře"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "daně",
@@ -1984,6 +3100,10 @@ export const examples = {
         model: "kancelaře",
         variants: ["daně", "dani", "dana"],
         correct: ["daně"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "daně",
@@ -1991,6 +3111,10 @@ export const examples = {
         model: "kancelaře",
         variants: ["daně", "dani", "dane"],
         correct: ["daně"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "postele",
@@ -1998,6 +3122,10 @@ export const examples = {
         model: "kancelaře",
         variants: ["postele", "postela", "posteli"],
         correct: ["postele"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "parkoviště",
@@ -2005,6 +3133,10 @@ export const examples = {
         model: "moře",
         variants: ["parkovišti", "parkoviště", "parkovišty"],
         correct: ["parkoviště"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "postele",
@@ -2012,6 +3144,10 @@ export const examples = {
         model: "moře",
         variants: ["hřište", "hřiště", "hřišti"],
         correct: ["hřiště"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "schodiště",
@@ -2019,6 +3155,10 @@ export const examples = {
         model: "moře",
         variants: ["schodište", "schodišti", "schodiště"],
         correct: ["schodiště"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "slunce",
@@ -2026,6 +3166,10 @@ export const examples = {
         model: "moře",
         variants: ["slunce", "slunci", "slunca"],
         correct: ["slunce"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "bydliště",
@@ -2033,6 +3177,10 @@ export const examples = {
         model: "moře",
         variants: ["bydliště", "bydlišti", "bydlište"],
         correct: ["bydliště"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "nástupiště",
@@ -2041,6 +3189,10 @@ export const examples = {
         model: "moře",
         variants: ["nástupište", "nástupiště", "nástupišti"],
         correct: ["nástupiště"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "bandita",
@@ -2048,6 +3200,10 @@ export const examples = {
         model: "kolegy",
         variants: ["bandity", "bandita", "banditi"],
         correct: ["bandity"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "starosta",
@@ -2055,6 +3211,10 @@ export const examples = {
         model: "kolegy",
         variants: ["starosta", "starostu", "starosty"],
         correct: ["starosty"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "předseda",
@@ -2062,6 +3222,10 @@ export const examples = {
         model: "kolegy",
         variants: ["předseda", "předsedi", "předsedy"],
         correct: ["předsedy"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "monarcha",
@@ -2069,6 +3233,10 @@ export const examples = {
         model: "kolegy",
         variants: ["monarchy", "monarchu", "monarcha"],
         correct: ["monarchy"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "Honza",
@@ -2076,6 +3244,10 @@ export const examples = {
         model: "kolegy",
         variants: ["Honzy", "Honze", "Honza"],
         correct: ["Honzy"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "Jirka",
@@ -2083,6 +3255,10 @@ export const examples = {
         model: "kolegy",
         variants: ["Jirky", "Jirkovi", "Jirka"],
         correct: ["Jirky"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "radost",
@@ -2090,6 +3266,10 @@ export const examples = {
         model: "místnosti",
         variants: ["radosty", "radosti", "radoste"],
         correct: ["radosti"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "zkušenost",
@@ -2097,6 +3277,10 @@ export const examples = {
         model: "místnosti",
         variants: ["zkušenost", "zkušenoste", "zkušenosti"],
         correct: ["zkušenosti"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "událost",
@@ -2104,6 +3288,10 @@ export const examples = {
         model: "místnosti",
         variants: ["události", "událost", "událostu"],
         correct: ["události"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "možnost",
@@ -2111,6 +3299,10 @@ export const examples = {
         model: "místnosti",
         variants: ["možnosti", "možnosty", "možnoste"],
         correct: ["možnosti"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "nutnost",
@@ -2118,6 +3310,10 @@ export const examples = {
         model: "místnosti",
         variants: ["nutnostem", "nutnosti", "nutnosty"],
         correct: ["nutnosti"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "veřejnost",
@@ -2125,6 +3321,10 @@ export const examples = {
         model: "místnosti",
         variants: ["veřejnosti", "veřejnosty", "veřejnost"],
         correct: ["veřejnosti"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "kuře",
@@ -2132,6 +3332,10 @@ export const examples = {
         model: "kuřete",
         variants: ["kuře", "kuřete", "kuři"],
         correct: ["kuřete"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "kotě",
@@ -2139,6 +3343,10 @@ export const examples = {
         model: "kuřete",
         variants: ["kotěte", "kotě", "koti"],
         correct: ["kotěte"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "děvče",
@@ -2146,6 +3354,10 @@ export const examples = {
         model: "kuřete",
         variants: ["děvčete", "děvče", "děvči"],
         correct: ["děvčete"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "rajče",
@@ -2153,6 +3365,10 @@ export const examples = {
         model: "kuřete",
         variants: ["rajče", "rajčete", "rajči"],
         correct: ["rajčete"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "dítě",
@@ -2160,6 +3376,10 @@ export const examples = {
         model: "kuřete",
         variants: ["dítěte", "díti", "dítě"],
         correct: ["dítěte"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "knihkupectví",
@@ -2167,6 +3387,10 @@ export const examples = {
         model: "nádraží",
         variants: ["knihkupectva", "knihkupectvi", "knihkupectví"],
         correct: ["knihkupectví"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "učení",
@@ -2174,6 +3398,10 @@ export const examples = {
         model: "nádraží",
         variants: ["učení", "učeny", "učeni"],
         correct: ["učení"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "přemýšlení",
@@ -2181,6 +3409,10 @@ export const examples = {
         model: "nádraží",
         variants: ["přemýšlení", "přemýšleny", "přemýšleni"],
         correct: ["přemýšlení"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "čekání",
@@ -2188,6 +3420,10 @@ export const examples = {
         model: "nádraží",
         variants: ["čekání", "čekány", "čekáni"],
         correct: ["čekání"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "přízemí",
@@ -2195,6 +3431,10 @@ export const examples = {
         model: "nádraží",
         variants: ["přízemí", "přízeme", "přízemi"],
         correct: ["přízemí"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
       {
         word: "počasí",
@@ -2203,6 +3443,10 @@ export const examples = {
         model: "nádraží",
         variants: ["počasí", "počasa", "počase"],
         correct: ["počasí"],
+        rule: {
+          pad: 2,
+          type: "singular",
+        },
       },
     ],
     plural: [
@@ -2212,6 +3456,10 @@ export const examples = {
         model: "dobrých",
         variants: ["zajímavý", "zajímavé", "zajímavých"],
         correct: ["zajímavých"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "veselé",
@@ -2219,6 +3467,10 @@ export const examples = {
         model: "dobrých",
         variants: ["veselých", "veselé", "veselí"],
         correct: ["veselých"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "horské",
@@ -2226,6 +3478,10 @@ export const examples = {
         model: "dobrých",
         variants: ["horský", "horských", "horské"],
         correct: ["horských"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "hodné",
@@ -2233,6 +3489,10 @@ export const examples = {
         model: "dobrých",
         variants: ["hodných", "hodné", "hodný"],
         correct: ["hodných"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "špinavé",
@@ -2240,6 +3500,10 @@ export const examples = {
         model: "dobrých",
         variants: ["špinavých", "špinaví", "špinavé"],
         correct: ["špinavých"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "rodinné",
@@ -2247,6 +3511,10 @@ export const examples = {
         model: "dobrých",
         variants: ["rodinných", "rodinné", "rodinný"],
         correct: ["rodinných"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "menší",
@@ -2254,6 +3522,10 @@ export const examples = {
         model: "kvalitních",
         variants: ["menších", "menší", "menšího"],
         correct: ["menších"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "národní",
@@ -2261,6 +3533,10 @@ export const examples = {
         model: "kvalitních",
         variants: ["národní", "národních", "národnich"],
         correct: ["národních"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "cizí",
@@ -2268,6 +3544,10 @@ export const examples = {
         model: "kvalitních",
         variants: ["cizich", "cizích", "cizí"],
         correct: ["cizích"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "luxusní",
@@ -2275,6 +3555,10 @@ export const examples = {
         model: "kvalitních",
         variants: ["luxusních", "luxusní", "luxusné"],
         correct: ["luxusních"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "poslední",
@@ -2282,6 +3566,10 @@ export const examples = {
         model: "kvalitních",
         variants: ["poslednich", "poslední", "posledních"],
         correct: ["posledních"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "telefonní",
@@ -2289,6 +3577,10 @@ export const examples = {
         model: "kvalitních",
         variants: ["telefonnich", "telefonních", "telefonní"],
         correct: ["telefonních"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "první",
@@ -2296,6 +3588,10 @@ export const examples = {
         model: "kvalitních",
         variants: ["první", "prvních", "prvnich"],
         correct: ["prvních"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "svatební",
@@ -2304,6 +3600,10 @@ export const examples = {
         model: "kvalitních",
         variants: ["svatebních", "svatebnich", "svatební"],
         correct: ["svatebních"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "televizní",
@@ -2311,6 +3611,10 @@ export const examples = {
         model: "kvalitních",
         variants: ["televizních", "televizní", "televiznich"],
         correct: ["televizních"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "syni",
@@ -2318,6 +3622,10 @@ export const examples = {
         model: "studentů",
         variants: ["synů", "syn", "synu"],
         correct: ["synů"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "kamarádi",
@@ -2325,6 +3633,10 @@ export const examples = {
         model: "studentů",
         variants: ["kamarádů", "kamarádu", "kamarád"],
         correct: ["kamarádů"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "veselé",
@@ -2332,6 +3644,10 @@ export const examples = {
         model: "dobrých",
         variants: ["veselých", "veselé", "veselych"],
         correct: ["veselých"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "vojáci",
@@ -2339,6 +3655,10 @@ export const examples = {
         model: "studentů",
         variants: ["voják", "vojákov", "vojáků"],
         correct: ["vojáků"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "sportovci",
@@ -2346,6 +3666,10 @@ export const examples = {
         model: "studentů",
         variants: ["sportovcu", "sportovců", "sportovcev"],
         correct: ["sportovců"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "programátori",
@@ -2353,6 +3677,10 @@ export const examples = {
         model: "studentů",
         variants: ["programátory", "programátorů", "programátoru"],
         correct: ["programátorů"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "Češi",
@@ -2360,6 +3688,10 @@ export const examples = {
         model: "studentů",
         variants: ["Čechů", "Čech", "Čechu", "Češi"],
         correct: ["Čechů"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "kostely",
@@ -2367,6 +3699,10 @@ export const examples = {
         model: "banánů",
         variants: ["kostelu", "kostelů", "kostely", "kostele"],
         correct: ["kostelů"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "gotické",
@@ -2374,6 +3710,10 @@ export const examples = {
         model: "banánů",
         variants: ["gotických", "gotickych", "gotickich"],
         correct: ["gotických"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "břehy",
@@ -2382,6 +3722,10 @@ export const examples = {
         model: "banánů",
         variants: ["břehy", "břehů", "břehu"],
         correct: ["břehů"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "jazyky",
@@ -2389,6 +3733,10 @@ export const examples = {
         model: "banánů",
         variants: ["jazyk", "jazycu", "jazyků", "jazyku"],
         correct: ["jazyků"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "problémy",
@@ -2396,6 +3744,10 @@ export const examples = {
         model: "banánů",
         variants: ["problémů", "problému", "problém", "problémy"],
         correct: ["problémů"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "stromy",
@@ -2403,6 +3755,10 @@ export const examples = {
         model: "banánů",
         variants: ["strom", "stromů", "stromy", "stromu"],
         correct: ["stromů"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "instinkty",
@@ -2410,6 +3766,10 @@ export const examples = {
         model: "banánů",
         variants: ["instinkt", "instinktu", "instinktů"],
         correct: ["instinktů"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "diskotéky",
@@ -2417,6 +3777,10 @@ export const examples = {
         model: "káv",
         variants: ["diskotéky", "diskotéku", "diskoték"],
         correct: ["diskoték"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "zeleniny",
@@ -2424,6 +3788,10 @@ export const examples = {
         model: "káv",
         variants: ["zelenin", "zeleniny", "zeleninů"],
         correct: ["zelenin"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "mapy",
@@ -2431,6 +3799,10 @@ export const examples = {
         model: "káv",
         variants: ["mapu", "mapa", "map"],
         correct: ["map"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "univerzity",
@@ -2438,6 +3810,10 @@ export const examples = {
         model: "káv",
         variants: ["univerzit", "univerzity", "univerzitu"],
         correct: ["univerzit"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "jízdy",
@@ -2446,6 +3822,10 @@ export const examples = {
         model: "káv",
         variants: ["jízd", "jízdu", "jízde"],
         correct: ["jízd"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "chyby",
@@ -2453,6 +3833,10 @@ export const examples = {
         model: "káv",
         variants: ["chyb", "chyba", "chyby"],
         correct: ["chyb"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "divadla",
@@ -2461,6 +3845,10 @@ export const examples = {
         model: "aut",
         variants: ["divadel", "divadla", "divadly", "divadlů"],
         correct: ["divadel"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "dřeva",
@@ -2468,6 +3856,10 @@ export const examples = {
         model: "aut",
         variants: ["dřevů", "dřevy", "dřev"],
         correct: ["dřev"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "miminka",
@@ -2475,6 +3867,10 @@ export const examples = {
         model: "aut",
         variants: ["mimin", "miminek", "miminků"],
         correct: ["miminek"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "kola",
@@ -2482,6 +3878,10 @@ export const examples = {
         model: "aut",
         variants: ["kol", "kolů", "koly"],
         correct: ["kol"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "jídla",
@@ -2489,6 +3889,10 @@ export const examples = {
         model: "aut",
         variants: ["jídel", "jídl", "jídlů"],
         correct: ["jídel"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "prodavači",
@@ -2496,6 +3900,10 @@ export const examples = {
         model: "mužů",
         variants: ["prodavačů", "prodavaču", "prodavač"],
         correct: ["prodavačů"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "elektrikáři",
@@ -2504,6 +3912,10 @@ export const examples = {
         model: "mužů",
         variants: ["elektrikáři", "elektrikářu", "elektrikářů"],
         correct: ["elektrikářů"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "hasiči",
@@ -2511,6 +3923,10 @@ export const examples = {
         model: "mužů",
         variants: ["hasiči", "hasičů", "hasiču"],
         correct: ["hasičů"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "malíři",
@@ -2519,6 +3935,10 @@ export const examples = {
         model: "mužů",
         variants: ["malíř", "malířů", "malířu"],
         correct: ["malířů"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "cukráři",
@@ -2526,6 +3946,10 @@ export const examples = {
         model: "mužů",
         variants: ["cukrářa", "cukrářů", "cukrářu"],
         correct: ["cukrářů"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "pekaři",
@@ -2534,6 +3958,10 @@ export const examples = {
         model: "mužů",
         variants: ["pekařů", "pekařu", "pekaře"],
         correct: ["pekařů"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "správci",
@@ -2541,6 +3969,10 @@ export const examples = {
         model: "soudců",
         variants: ["správci", "správců", "správcu"],
         correct: ["správců"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "zachránci",
@@ -2549,6 +3981,10 @@ export const examples = {
         model: "soudců",
         variants: ["zachráncu", "zachránci", "zachránců"],
         correct: ["zachránců"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "příjemci",
@@ -2556,6 +3992,10 @@ export const examples = {
         model: "soudců",
         variants: ["příjemci", "příjemců", "příjemcu"],
         correct: ["příjemců"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "dárci",
@@ -2563,6 +4003,10 @@ export const examples = {
         model: "soudců",
         variants: ["dárců", "dárci", "dárců"],
         correct: ["dárců"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "průvodců",
@@ -2571,6 +4015,10 @@ export const examples = {
         model: "soudců",
         variants: ["průvodců", "průvodcu", "průvodce"],
         correct: ["průvodců"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "obhájci",
@@ -2578,6 +4026,10 @@ export const examples = {
         model: "soudců",
         variants: ["obhájců", "obhájce", "obhájcu"],
         correct: ["obhájců"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "čaje",
@@ -2586,6 +4038,10 @@ export const examples = {
         model: "čajů",
         variants: ["čaje", "čajů", "čaju"],
         correct: ["čajů"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "pokoje",
@@ -2593,6 +4049,10 @@ export const examples = {
         model: "čajů",
         variants: ["pokoje", "pokojů", "pokoju"],
         correct: ["pokojů"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "nastroje",
@@ -2600,6 +4060,10 @@ export const examples = {
         model: "čajů",
         variants: ["nastrojů", "nastroje", "nastroju"],
         correct: ["nastrojů"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "stroje",
@@ -2607,6 +4071,10 @@ export const examples = {
         model: "čajů",
         variants: ["stroju", "stroje", "strojů"],
         correct: ["strojů"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "orloje",
@@ -2614,6 +4082,10 @@ export const examples = {
         model: "čajů",
         variants: ["orloju", "orlojů", "orloji"],
         correct: ["orlojů"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "ohňostroje",
@@ -2621,6 +4093,10 @@ export const examples = {
         model: "čajů",
         variants: ["ohňostroje", "ohňostrojů", "ohňostroju"],
         correct: ["ohňostrojů"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "restaurace (pl)",
@@ -2628,6 +4104,10 @@ export const examples = {
         model: "restaurací",
         variants: ["restaurací", "restaurace", "restauraci"],
         correct: ["restaurací"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "konference (pl)",
@@ -2635,6 +4115,10 @@ export const examples = {
         model: "restaurací",
         variants: ["konference", "konferencí", "konferenci"],
         correct: ["konferencí"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "růže (pl)",
@@ -2642,6 +4126,10 @@ export const examples = {
         model: "restaurací",
         variants: ["růži", "růže", "růží"],
         correct: ["růží"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "práce (pl)",
@@ -2649,6 +4137,10 @@ export const examples = {
         model: "restaurací",
         variants: ["práci", "práci", "práce"],
         correct: ["práci"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "investice (pl)",
@@ -2656,6 +4148,10 @@ export const examples = {
         model: "restaurací",
         variants: ["investice", "investicí", "investici"],
         correct: ["investicí"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "dálnice (pl)",
@@ -2663,6 +4159,10 @@ export const examples = {
         model: "ulic",
         variants: ["dálnic", "dálnice", "dálniců"],
         correct: ["dálnic"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "lavice (pl)",
@@ -2670,6 +4170,10 @@ export const examples = {
         model: "ulic",
         variants: ["lavic", "lavice", "lavicí"],
         correct: ["lavic"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "košile (pl)",
@@ -2677,6 +4181,10 @@ export const examples = {
         model: "ulic",
         variants: ["košil", "košile", "košilů"],
         correct: ["košil"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "chvile (pl)",
@@ -2684,6 +4192,10 @@ export const examples = {
         model: "ulic",
         variants: ["chvili", "chvile", "chvil"],
         correct: ["chvil"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "lžice (pl)",
@@ -2691,6 +4203,10 @@ export const examples = {
         model: "ulic",
         variants: ["lžici", "lžic", "lžice"],
         correct: ["lžic"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "krabice",
@@ -2698,6 +4214,10 @@ export const examples = {
         model: "ulic",
         variants: ["krabic", "krabici", "krabice"],
         correct: ["krabic"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "skříne",
@@ -2705,6 +4225,10 @@ export const examples = {
         model: "kanceláří",
         variants: ["skříni", "skříní", "skříne"],
         correct: ["skříní"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "garáže",
@@ -2712,6 +4236,10 @@ export const examples = {
         model: "kanceláří",
         variants: ["garáží", "garáži", "garáže"],
         correct: ["garáží"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "tramvaje",
@@ -2719,6 +4247,10 @@ export const examples = {
         model: "kanceláří",
         variants: ["tramvají", "tramvaji", "tramvaju"],
         correct: ["tramvají"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "odpověde",
@@ -2726,6 +4258,10 @@ export const examples = {
         model: "kanceláří",
         variants: ["odpověde", "odpovědi", "odpovědí"],
         correct: ["odpovědí"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "koleje",
@@ -2733,6 +4269,10 @@ export const examples = {
         model: "kanceláří",
         variants: ["kolejů", "kolejí", "koleje"],
         correct: ["kolejí"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "čtvrtě",
@@ -2741,6 +4281,10 @@ export const examples = {
         model: "kanceláří",
         variants: ["čtvrť", "čtvrtí", "čtvrti"],
         correct: ["čtvrtí"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "schodiště",
@@ -2748,6 +4292,10 @@ export const examples = {
         model: "moří",
         variants: ["schodišti", "schodiští", "schodište"],
         correct: ["schodiští"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "čtvrtí",
@@ -2756,6 +4304,10 @@ export const examples = {
         model: "moří",
         variants: ["čtvrť", "čtvrtí", "čtvrti"],
         correct: ["čtvrtí"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "čtvrtí",
@@ -2764,6 +4316,10 @@ export const examples = {
         model: "moří",
         variants: ["čtvrť", "čtvrtí", "čtvrti"],
         correct: ["čtvrtí"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "čtvrtí",
@@ -2772,6 +4328,10 @@ export const examples = {
         model: "moří",
         variants: ["čtvrť", "čtvrtí", "čtvrti"],
         correct: ["čtvrtí"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "čtvrtí",
@@ -2780,6 +4340,10 @@ export const examples = {
         model: "moří",
         variants: ["čtvrť", "čtvrtí", "čtvrti"],
         correct: ["čtvrtí"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
       {
         word: "čtvrtí",
@@ -2788,6 +4352,10 @@ export const examples = {
         model: "moří",
         variants: ["čtvrť", "čtvrtí", "čtvrti"],
         correct: ["čtvrtí"],
+        rule: {
+          pad: 2,
+          type: "plural",
+        },
       },
     ],
   },

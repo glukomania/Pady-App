@@ -47,8 +47,6 @@ export const Settings = (props) => {
 
   return (
     <View style={{ flex: 1, margin: "10%" }}>
-      {console.log("Settings render")}
-
       <View style={{ marginBottom: "20%" }}>
         <Text style={{ marginBottom: "5%", fontWeight: "700", fontSize: 18 }}>
           Number of correct answers to go to the next level:

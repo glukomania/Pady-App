@@ -21,6 +21,8 @@ export const LevelStart = (props) => {
         return colors.orange;
       } else if (number === props.currentLevel.pad && props.currentLevel.type === "plural") {
         return colors.green;
+      } else if (number === props.currentLevel.pad && props.currentLevel.type === "quizz") {
+        return colors.green;
       } else {
         return colors.textGrey;
       }
@@ -33,6 +35,8 @@ export const LevelStart = (props) => {
         return colors.textGrey;
       } else if (number === props.currentLevel.pad && props.currentLevel.type === "plural") {
         return colors.orange;
+      } else if (number === props.currentLevel.pad && props.currentLevel.type === "quizz") {
+        return colors.green;
       } else {
         return colors.textGrey;
       }
@@ -69,7 +73,11 @@ export const LevelStart = (props) => {
         </Text>
         {[1, 2, 3, 4, 5, 6, 7].map(renderPad)}
       </View>
-      <Pressable style={styles.button} onPress={props.onPress}>
+      {console.log("TYPE", props.currentLevel.type)}
+      <Pressable
+        style={styles.button}
+        onPress={props.currentLevel.type === "quizz" ? () => props.onQuizzPress() : props.onPress}
+      >
         <Text style={styles.buttonText}>{"Jdeme na to! "}</Text>
       </Pressable>
     </View>

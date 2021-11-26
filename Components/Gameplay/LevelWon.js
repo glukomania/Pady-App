@@ -245,25 +245,31 @@ export const LevelWon = (props) => {
   };
 
   const renderWinScreen = useCallback(() => {
+    console.log("LEVEL WON");
+    console.log("props.currentLevel", props.currentLevel);
+
     if (
       props.currentLevel.pad < 7 ||
-      (props.currentLevel.pad === 7 && props.currentLevel.type === "singular")
+      (props.currentLevel.pad === 7 && props.currentLevel.type !== "quizz")
     ) {
-      if (props.isQuizzPassed) {
+      if (props.currentLevel.type === "quizz") {
         return renderQuizzPassed();
-      } else {
-        if (props.currentLevel.type === "singular") {
-          return renderCongrats();
-        } else {
-          return renderSumQuizz();
-        }
+      } else if (props.currentLevel.type === "singular") {
+        return renderCongrats();
+      } else if (props.currentLevel.type === "plural") {
+        return renderSumQuizz();
       }
     } else {
       renderTotalWin();
     }
-  }, [props.currentLevel, props.isQuizzPassed]);
+  }, [props.currentLevel]);
 
-  return <View style={{ flex: 1 }}>{renderWinScreen()}</View>;
+  return (
+    <View style={{ flex: 1 }}>
+      {console.log("LevelWon storage", props.currentLevel)}
+      {renderWinScreen()}
+    </View>
+  );
 };
 
 const styles = StyleSheet.create({

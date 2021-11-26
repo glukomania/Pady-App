@@ -72,6 +72,8 @@ export const MiddleQuizz = (props) => {
           width: "100%",
         }}
       >
+        {console.log("MiddleQuizz storage", props.currentLevel)}
+
         <Pressable
           onPress={() => {
             setIsRuleModalOpen(true);
@@ -149,7 +151,7 @@ export const MiddleQuizz = (props) => {
       </View>
       <View style={{ height: "8%" }}>
         <Text style={{ fontSize: 15, color: "#ec9706", marginTop: "3%", fontWeight: "700" }}>
-          {`Až ${props.currentLevel.pad}. pádu`}
+          {`Až ${props.currentLevel.pad}. pádu včetně`}
         </Text>
       </View>
 
@@ -203,7 +205,7 @@ export const MiddleQuizz = (props) => {
                 }}
               >
                 <ModalRule
-                  rule={props.rule}
+                  rule={props.question.rule}
                   setIsRuleModalOpen={setIsRuleModalOpen}
                   padName={props.padName}
                 />

@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { StyleSheet, Text, View, Pressable, ScrollView } from "react-native";
 import { Table, Row, Rows, TableWrapper } from "react-native-table-component";
+import { rules } from "../../data/rules";
 
 export const LevelInfo = (props) => {
-  const adgTableHead = props.rule.adjactives.tableHead;
-  const adgTableData = props.rule.adjactives.tableData;
-  const subjTableHead = props.rule.subjectives.tableHead;
-  const subjTableData = props.rule.subjectives.tableData;
+  const rule = useMemo(() => rules[props.rule.pad][props.rule.type], [props.rule]);
+
+  const adgTableHead = rule.adjactives.tableHead;
+  const adgTableData = rule.adjactives.tableData;
+  const subjTableHead = rule.subjectives.tableHead;
+  const subjTableData = rule.subjectives.tableData;
 
   return (
     <View

@@ -47,24 +47,30 @@ export const Training = (props) => {
   };
 
   const question = useMemo(() => {
-    let randNumber = Math.floor(
-      Math.random() * examples[currentLevel.pad][currentLevel.type].length
-    );
+    if (currentLevel.type !== "quizz") {
+      let randNumber = Math.floor(
+        Math.random() * examples[currentLevel.pad][currentLevel.type].length
+      );
 
-    while (pastQuestions.includes(randNumber)) {
-      randNumber = Math.floor(Math.random() * examples[currentLevel.pad][currentLevel.type].length);
-      if (
-        pastQuestions.length === examples[currentLevel.pad][currentLevel.type].length ||
-        score === props.maxScoreToWin
-      ) {
-        setIsModalOpen(false);
-        navigation.navigate("LevelWon");
-        break;
+      while (pastQuestions.includes(randNumber)) {
+        randNumber = Math.floor(
+          Math.random() * examples[currentLevel.pad][currentLevel.type].length
+        );
+        if (
+          pastQuestions.length === examples[currentLevel.pad][currentLevel.type].length ||
+          score === props.maxScoreToWin
+        ) {
+          setIsModalOpen(false);
+          navigation.navigate("LevelWon");
+          break;
+        }
       }
-    }
-    setPastQuestions([...pastQuestions, randNumber]);
+      setPastQuestions([...pastQuestions, randNumber]);
 
-    return examples[currentLevel.pad][currentLevel.type][randNumber];
+      return examples[currentLevel.pad][currentLevel.type][randNumber];
+    } else {
+      return quizzQuestion;
+    }
   }, [questionCounter, currentLevel]);
 
   const quizzQuestion = useMemo(() => {
@@ -97,6 +103,8 @@ export const Training = (props) => {
     if (currentLevel.type === "singular") {
       newProgress = { pad: currentLevel.pad, type: "plural" };
     } else if (currentLevel.type === "plural" && currentLevel.pad < 7) {
+      newProgress = { pad: currentLevel.pad, type: "quizz" };
+    } else if (currentLevel.type === "quizz" && currentLevel.pad < 7) {
       newProgress = { pad: currentLevel.pad + 1, type: "singular" };
     } else {
       setIsModalOpen(false);
@@ -115,13 +123,10 @@ export const Training = (props) => {
 
   useEffect(() => {
     if (score === props.maxScoreToWin) {
-      if (props.storageProgress.type === "plural") {
-        setIsQuizzPassed(true);
-      }
       setIsModalOpen(false);
       navigation.navigate("LevelWon");
     }
-  }, [score]);
+  }, [score, props.storageProgress]);
 
   return (
     <View
@@ -141,8 +146,12 @@ export const Training = (props) => {
                 onPress={() => {
                   navigation.navigate("LevelInfo");
                 }}
-                rule={rule}
+                rule={currentLevel}
                 currentLevel={currentLevel}
+                onQuizzPress={() => {
+                  console.log("onQuizzPress");
+                  navigation.navigate("MiddleQuizz");
+                }}
               />
             )}
           />
@@ -157,7 +166,7 @@ export const Training = (props) => {
                   setQuestionCounter(0);
                   navigation.navigate("LevelQuizz");
                 }}
-                rule={rule}
+                rule={currentLevel}
                 currentLevel={currentLevel}
                 padName={padName}
               />
@@ -178,7 +187,7 @@ export const Training = (props) => {
                 setQuestionCounter={setQuestionCounter}
                 questionCounter={questionCounter}
                 maxScoreToWin={props.maxScoreToWin}
-                rule={rule}
+                rule={currentLevel}
                 currentLevel={currentLevel}
                 padName={padName}
                 isModalOpen={isModalOpen}
@@ -201,7 +210,7 @@ export const Training = (props) => {
                 setQuestionCounter={setQuestionCounter}
                 questionCounter={questionCounter}
                 maxScoreToWin={props.maxScoreToWin}
-                rule={rule}
+                rule={quizzQuestion.rule}
                 currentLevel={currentLevel}
                 padName={padName}
                 isModalOpen={isModalOpen}
@@ -217,7 +226,7 @@ export const Training = (props) => {
                   saveProgress();
                   navigation.navigate("LevelInfo");
                 }}
-                rule={rule}
+                // rule={currentLevel}
                 onOkPress={() => {
                   saveProgress();
                   navigation.navigate("LevelInfo");
@@ -226,6 +235,7 @@ export const Training = (props) => {
                   setScore(0);
                   setPastQuestions([]);
                   setQuestionCounter(0);
+                  saveProgress();
                   navigation.navigate("MiddleQuizz");
                 }}
                 currentLevel={currentLevel}
@@ -236,7 +246,6 @@ export const Training = (props) => {
                   saveProgress();
                   navigation.navigate("LevelStart");
                 }}
-                isQuizzPassed={isQuizzPassed}
               />
             )}
           </Stack.Screen>

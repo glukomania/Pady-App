@@ -132,6 +132,16 @@ export const LevelQuizz = (props) => {
     );
   };
 
+  const getPadName = useCallback(() => {
+    if (props.currentLevel.type === "singular") {
+      return "singulár";
+    } else if (props.currentLevel.type === "plural") {
+      return "plurál";
+    } else {
+      return "quizz";
+    }
+  }, [props.currentLevel]);
+
   return (
     <View
       style={{
@@ -142,7 +152,6 @@ export const LevelQuizz = (props) => {
         width: "100%",
       }}
     >
-      {console.log("render quizz")}
       <View style={{ height: "8%", marginTop: "4%" }}>
         <Text style={{ fontSize: 20, color: "#ec9706", marginTop: "6%", fontWeight: "700" }}>
           {props.padName}
@@ -150,7 +159,7 @@ export const LevelQuizz = (props) => {
       </View>
       <View style={{ height: "8%" }}>
         <Text style={{ fontSize: 15, color: "#ec9706", marginTop: "3%", fontWeight: "700" }}>
-          {props.currentLevel.type === "singular" ? "singulár" : "plurál"}
+          {getPadName()}
         </Text>
       </View>
 

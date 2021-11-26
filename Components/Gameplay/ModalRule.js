@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import {
   StyleSheet,
   Text,
@@ -11,8 +11,11 @@ import {
 } from "react-native";
 import { Table, Row, Rows, Col, TableWrapper, Cell } from "react-native-table-component";
 import { colors } from "../../data/colors";
+import { rules } from "../../data/rules";
 
 export const ModalRule = (props) => {
+  const rule = useMemo(() => rules[props.rule.pad][props.rule.type], [props.rule]);
+
   return (
     <View
       style={{
@@ -43,14 +46,14 @@ export const ModalRule = (props) => {
           <View style={styles.ruleModalContainer}>
             <Table borderStyle={{ borderWidth: 1, borderColor: "#ccc", marginBottom: "5%" }}>
               <Row
-                data={props.rule.adjactives.tableHead}
+                data={rule.adjactives.tableHead}
                 style={styles.head}
                 flexArr={[0.5, 1, 1, 1]}
                 textStyle={styles.tableText}
               />
               <TableWrapper style={styles.wrapper}>
                 <Rows
-                  data={props.rule.adjactives.tableData}
+                  data={rule.adjactives.tableData}
                   flexArr={[0.5, 1, 1, 1]}
                   style={styles.tablerow}
                   textStyle={styles.tableText}
@@ -62,14 +65,14 @@ export const ModalRule = (props) => {
           <View style={styles.ruleModalContainer}>
             <Table borderStyle={{ borderWidth: 1, borderColor: "#ccc", marginBottom: "5%" }}>
               <Row
-                data={props.rule.subjectives.tableHead}
+                data={rule.subjectives.tableHead}
                 style={styles.head}
                 textStyle={styles.tableText}
                 flexArr={[0.5, 1, 1, 1]}
               />
               <TableWrapper style={styles.wrapper}>
                 <Rows
-                  data={props.rule.subjectives.tableData}
+                  data={rule.subjectives.tableData}
                   flexArr={[0.5, 1, 1, 1]}
                   style={styles.tablerow}
                   textStyle={styles.tableText}
@@ -88,7 +91,7 @@ export const ModalRule = (props) => {
           }}
           onPress={() => props.setIsRuleModalOpen(false)}
         >
-          <Text style={{ color: "white", fontSize: "20" }}>Jasně</Text>
+          <Text style={{ color: "white", fontSize: 20 }}>Jasně</Text>
         </Pressable>
       </View>
     </View>

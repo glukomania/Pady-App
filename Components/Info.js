@@ -7,10 +7,6 @@ import { rules } from "../data/rules.js";
 import { Table, Row, Rows, Col, TableWrapper, Cell } from "react-native-table-component";
 
 export const Info = () => {
-  useEffect(() => {
-    console.log("storageProgress", props.storageProgress);
-  }, [props.storageProgress]);
-
   const renderPad = (number) => {
     return (
       <List.Accordion
