@@ -245,9 +245,6 @@ export const LevelWon = (props) => {
   };
 
   const renderWinScreen = useCallback(() => {
-    console.log("LEVEL WON");
-    console.log("props.currentLevel", props.currentLevel);
-
     if (
       props.currentLevel.pad < 7 ||
       (props.currentLevel.pad === 7 && props.currentLevel.type !== "quizz")
@@ -264,12 +261,7 @@ export const LevelWon = (props) => {
     }
   }, [props.currentLevel]);
 
-  return (
-    <View style={{ flex: 1 }}>
-      {console.log("LevelWon storage", props.currentLevel)}
-      {renderWinScreen()}
-    </View>
-  );
+  return <View style={{ flex: 1 }}>{renderWinScreen()}</View>;
 };
 
 const styles = StyleSheet.create({

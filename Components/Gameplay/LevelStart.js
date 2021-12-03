@@ -73,7 +73,6 @@ export const LevelStart = (props) => {
         </Text>
         {[1, 2, 3, 4, 5, 6, 7].map(renderPad)}
       </View>
-      {console.log("TYPE", props.currentLevel.type)}
       <Pressable
         style={styles.button}
         onPress={props.currentLevel.type === "quizz" ? () => props.onQuizzPress() : props.onPress}

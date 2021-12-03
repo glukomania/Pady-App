@@ -149,7 +149,6 @@ export const Training = (props) => {
                 rule={currentLevel}
                 currentLevel={currentLevel}
                 onQuizzPress={() => {
-                  console.log("onQuizzPress");
                   navigation.navigate("MiddleQuizz");
                 }}
               />

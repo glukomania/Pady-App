@@ -34,8 +34,6 @@ export const ModalRule = (props) => {
         backgroundColor: "rgba(0,0,0,0.3)",
       }}
     >
-      {console.log("ModalRule render")}
-
       <View style={{ width: "100%", height: "100%", backgroundColor: "white" }}>
         <View style={{ alignItems: "center" }}>
           <Text style={{ fontSize: 20, color: "#ec9706", marginTop: "9%", fontWeight: "700" }}>

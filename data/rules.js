@@ -80,7 +80,7 @@ export const rules = {
           ["Ma", "studentů", "mužů, soudců", "kolegů"],
           ["Mi", "banánů", "čajů", "--"],
           ["F", "káv", "kanceláří, restaurací, ulic", "místností"],
-          ["N", "aut", "moří", "kuřat, nádraží"],
+          ["N", "aut", "moří, schodišť", "kuřat, nádraží"],
         ],
       },
     },

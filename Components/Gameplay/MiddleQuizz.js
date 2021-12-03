@@ -72,8 +72,6 @@ export const MiddleQuizz = (props) => {
           width: "100%",
         }}
       >
-        {console.log("MiddleQuizz storage", props.currentLevel)}
-
         <Pressable
           onPress={() => {
             setIsRuleModalOpen(true);

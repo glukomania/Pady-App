@@ -41,21 +41,15 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    console.log("storageProgress", storageProgress);
-  }, [storageProgress]);
-
-  useEffect(() => {
     if (shouldReadStorage) {
       readStoragePad();
       readStorageType();
-      console.log("re-read data");
       setShouldReadStorage(false);
     }
   }, [shouldReadStorage]);
 
   return (
     <NavigationContainer>
-      {console.log("APP renders")}
       <Tab.Navigator
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {
