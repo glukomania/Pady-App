@@ -4,8 +4,13 @@ import { Table, Row, Rows, TableWrapper } from "react-native-table-component";
 import { rules } from "../../data/rules";
 
 export const LevelInfo = (props) => {
-  const rule = useMemo(() => rules[props.rule.pad][props.rule.type], [props.rule]);
-
+  const rule = useMemo(() => {
+    if (props.rule.type !== "quizz") {
+      return rules[props.rule.pad][props.rule.type];
+    } else {
+      return rules[props.rule.pad]["plural"];
+    }
+  }, [props.rule]);
   const adgTableHead = rule.adjactives.tableHead;
   const adgTableData = rule.adjactives.tableData;
   const subjTableHead = rule.subjectives.tableHead;

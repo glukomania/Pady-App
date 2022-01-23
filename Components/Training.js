@@ -46,6 +46,28 @@ export const Training = (props) => {
     }
   };
 
+  const quizzQuestion = useMemo(() => {
+    let poolQuestions = [];
+
+    for (let i = 1; i <= currentLevel.pad; i++) {
+      const newPool = examples[i].singular.concat(examples[i].plural);
+
+      poolQuestions = poolQuestions.concat(newPool);
+    }
+
+    let randNumber = Math.floor(Math.random() * poolQuestions.length);
+
+    while (pastQuestions.includes(randNumber)) {
+      randNumber = Math.floor(Math.random() * poolQuestions.length);
+      if (pastQuestions.length === poolQuestions.length) {
+        setPastQuestions([]);
+      }
+    }
+    setPastQuestions([...pastQuestions, randNumber]);
+
+    return poolQuestions[randNumber];
+  }, [questionCounter, currentLevel]);
+
   const question = useMemo(() => {
     if (currentLevel.type !== "quizz") {
       let randNumber = Math.floor(
@@ -71,29 +93,7 @@ export const Training = (props) => {
     } else {
       return quizzQuestion;
     }
-  }, [questionCounter, currentLevel]);
-
-  const quizzQuestion = useMemo(() => {
-    let poolQuestions = [];
-
-    for (let i = 1; i <= currentLevel.pad; i++) {
-      const newPool = examples[i].singular.concat(examples[i].plural);
-
-      poolQuestions = poolQuestions.concat(newPool);
-    }
-
-    let randNumber = Math.floor(Math.random() * poolQuestions.length);
-
-    while (pastQuestions.includes(randNumber)) {
-      randNumber = Math.floor(Math.random() * poolQuestions.length);
-      if (pastQuestions.length === poolQuestions.length) {
-        setPastQuestions([]);
-      }
-    }
-    setPastQuestions([...pastQuestions, randNumber]);
-
-    return poolQuestions[randNumber];
-  }, [questionCounter]);
+  }, [questionCounter, currentLevel, quizzQuestion]);
 
   const rule = useMemo(() => rules[currentLevel.pad][currentLevel.type], [currentLevel]);
   const padName = useMemo(() => rules[currentLevel.pad].question);
@@ -106,10 +106,12 @@ export const Training = (props) => {
       newProgress = { pad: currentLevel.pad, type: "quizz" };
     } else if (currentLevel.type === "quizz" && currentLevel.pad < 7) {
       newProgress = { pad: currentLevel.pad + 1, type: "singular" };
+    } else if (currentLevel.type === "quizz" && currentLevel.pad === 7) {
+      newProgress = { pad: 1, type: "singular" };
     } else {
       setIsModalOpen(false);
       navigation.navigate("LevelWon");
-      newProgress = { pad: 1, type: "singular" };
+      newProgress = { pad: 7, type: "quizz" };
     }
 
     setCurrentLevel(newProgress);
@@ -225,7 +227,6 @@ export const Training = (props) => {
                   saveProgress();
                   navigation.navigate("LevelInfo");
                 }}
-                // rule={currentLevel}
                 onOkPress={() => {
                   saveProgress();
                   navigation.navigate("LevelInfo");

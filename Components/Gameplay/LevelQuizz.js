@@ -179,6 +179,7 @@ export const LevelQuizz = (props) => {
         }}
       >
         <View style={styles.centeredView}>
+          {console.log("props.question.correct", props.question.correct)}
           <View
             style={
               props.question.correct.includes(result)

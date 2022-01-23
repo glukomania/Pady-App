@@ -235,9 +235,23 @@ export const LevelWon = (props) => {
             >
               Kdo by si pomyslel!
             </Text>
-            <Text style={{ color: colors.textGrey, fontSize: 18 }}>
-              {`Teď umíte skloňovat lépe než kterýkoli Čech!`}
+            <Text
+              style={{
+                color: colors.darkGrey,
+                fontSize: 18,
+                paddingLeft: "10%",
+                paddingRight: "10%",
+              }}
+            >
+              {`Teď umíte skloňovat lépe než profesor!`}
             </Text>
+          </View>
+        </View>
+        <View style={{ justifyContent: "flex-end", height: "11%", flexDirection: "row" }}>
+          <View style={{ width: "100%" }}>
+            <Pressable onPress={props.onNePress} style={styles.button}>
+              <Text style={styles.buttonText}>{"Začít znovu!"}</Text>
+            </Pressable>
           </View>
         </View>
       </View>
@@ -249,6 +263,8 @@ export const LevelWon = (props) => {
       props.currentLevel.pad < 7 ||
       (props.currentLevel.pad === 7 && props.currentLevel.type !== "quizz")
     ) {
+      console.log(props.currentLevel.type);
+      console.log(props.currentLevel.pad);
       if (props.currentLevel.type === "quizz") {
         return renderQuizzPassed();
       } else if (props.currentLevel.type === "singular") {
@@ -257,7 +273,8 @@ export const LevelWon = (props) => {
         return renderSumQuizz();
       }
     } else {
-      renderTotalWin();
+      console.log("TOTAL WIN");
+      return renderTotalWin();
     }
   }, [props.currentLevel]);
 
