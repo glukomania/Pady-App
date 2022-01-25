@@ -75,7 +75,7 @@ export const LevelInfo = (props) => {
         </View>
       </ScrollView>
       <Pressable onPress={props.onPress} style={styles.button}>
-        <Text style={styles.buttonText}>{"Ok, start the quizz"}</Text>
+        <Text style={styles.buttonText}>{"Začněme!"}</Text>
       </Pressable>
     </View>
   );

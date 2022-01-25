@@ -95,7 +95,6 @@ export const Training = (props) => {
     }
   }, [questionCounter, currentLevel, quizzQuestion]);
 
-  const rule = useMemo(() => rules[currentLevel.pad][currentLevel.type], [currentLevel]);
   const padName = useMemo(() => rules[currentLevel.pad].question);
 
   const saveProgress = () => {
@@ -189,29 +188,6 @@ export const Training = (props) => {
                 questionCounter={questionCounter}
                 maxScoreToWin={props.maxScoreToWin}
                 rule={currentLevel}
-                currentLevel={currentLevel}
-                padName={padName}
-                isModalOpen={isModalOpen}
-                setIsModalOpen={setIsModalOpen}
-              />
-            )}
-          />
-
-          <Stack.Screen
-            name="MiddleQuizz"
-            options={{ headerShown: false }}
-            children={() => (
-              <MiddleQuizz
-                question={quizzQuestion}
-                onPress={() => {
-                  navigation.navigate("MiddleQuizz");
-                }}
-                score={score}
-                setScore={setScore}
-                setQuestionCounter={setQuestionCounter}
-                questionCounter={questionCounter}
-                maxScoreToWin={props.maxScoreToWin}
-                rule={quizzQuestion.rule}
                 currentLevel={currentLevel}
                 padName={padName}
                 isModalOpen={isModalOpen}

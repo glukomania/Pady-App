@@ -3,9 +3,9 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { Training } from "./Components/Training";
-import { Quizz } from "./Components/Quizz";
 import { Settings } from "./Components/Settings";
 import { Info } from "./Components/Info";
+import { Practice } from "./Components/Practice";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const Tab = createBottomTabNavigator();
@@ -61,7 +61,7 @@ export default function App() {
               iconName = "cog-outline";
             } else if (route.name === "Info") {
               iconName = "information-circle-outline";
-            } else if (route.name === "Quizz") {
+            } else if (route.name === "Сvičení") {
               iconName = "barbell-outline";
             }
 
@@ -84,6 +84,7 @@ export default function App() {
             />
           )}
         />
+        <Tab.Screen options={{ headerShown: false }} name="Сvičení" component={Practice} />
         <Tab.Screen name="Info" component={Info} />
         <Tab.Screen
           name="Nastavení"

@@ -7467,7 +7467,7 @@ export const examples = {
         word: "orloj",
         sentance: "Dalších sto let nebyl nikdo schopný ... opravit.",
         model: "čaj",
-        variants: ["orloj", "orloj", "orloj"],
+        variants: ["orloje", "orloja", "orloj"],
         correct: ["orloj"],
         rule: {
           pad: 4,
@@ -9300,7 +9300,7 @@ export const examples = {
         word: "paní",
         sentance: "Milá ... učitelko, děkujeme za ty super dva roky, co jste s námi přetrpěla.",
         model: "kolegyně!",
-        variants: ["paní", "paní", "paní"],
+        variants: ["pani", "pane", "paní"],
         correct: ["paní"],
         rule: {
           pad: 5,

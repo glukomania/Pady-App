@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import {
   StyleSheet,
   Text,
@@ -13,6 +13,8 @@ import { ProgressBar } from "react-native-paper";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { colors } from "../../data/colors";
 import { ModalRule } from "./ModalRule";
+import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
+import { ScrollView } from "react-native-gesture-handler";
 
 const Item = (props) => {
   const onPressHandle = useCallback(() => {
@@ -59,10 +61,9 @@ const Item = (props) => {
   );
 };
 
-export const LevelQuizz = (props) => {
+export const PracticeQuizz = (props) => {
   const [result, setResult] = useState(null);
   const [isRuleModalOpen, setIsRuleModalOpen] = useState(false);
-  const [text, onChangeText] = useState("type here");
 
   const nextHanle = useCallback(() => {
     setResult(null);
@@ -156,25 +157,106 @@ export const LevelQuizz = (props) => {
 
   const renderVariants = () => {
     return (
-      <FlatList
-        data={props.question.variants}
-        nestedScrollEnabled={true}
-        renderItem={({ item }) => (
-          <Item
-            item={item}
-            number={props.randNumber}
-            result={result}
-            setResult={setResult}
-            correct={props.question.correct}
-            setScore={props.setScore}
-            score={props.score}
-            setIsModalOpen={props.setIsModalOpen}
-          />
-        )}
-        keyExtractor={(item) => item}
-      />
+      <View style={styles.container}>
+        <Text style={styles.question}>{props.question.sentance}</Text>
+        <FlatList
+          data={props.question.variants}
+          nestedScrollEnabled={true}
+          renderItem={({ item }) => (
+            <Item
+              item={item}
+              number={props.randNumber}
+              result={result}
+              setResult={setResult}
+              correct={props.question.correct}
+              setScore={props.setScore}
+              score={props.score}
+              setIsModalOpen={props.setIsModalOpen}
+            />
+          )}
+          keyExtractor={(item) => item}
+        />
+      </View>
     );
   };
+
+  const renderInput = () => {
+    return (
+      <View style={styles.container}>
+        <KeyboardAwareScrollView
+          style={{
+            height: "100%",
+            flex: 1,
+          }}
+        >
+          <Text style={styles.question}>
+            {props.question.sentance.replace("...", `(${props.question.word})`)}
+          </Text>
+          <View style={{ height: "80%" }}>
+            {/* <View
+              style={{
+                height: "15%",
+                paddingLeft: "15%",
+                paddingRight: "10%",
+              }}
+            >
+              <Text style={{ color: colors.textGrey }}>{props.question.word}</Text>
+            </View> */}
+            <View
+              style={{
+                padding: "5%",
+                backgroundColor: "white",
+                borderRadius: "10%",
+                // marginLeft: "10%",
+                // marginRight: "10%",
+                borderWidth: 1,
+                borderColor: colors.variantBorderColor,
+                flexDirection: "row",
+              }}
+            >
+              <TextInput onChangeText={setResult} value={result} style={{ flex: 1 }} />
+              {console.log(props.question.correct)}
+              <Ionicons name={"send"} size={25} color={colors.orange} onPress={onCheck} />
+            </View>
+          </View>
+        </KeyboardAwareScrollView>
+      </View>
+    );
+  };
+
+  const [isCorrect, setIsCorrect] = useState(false);
+
+  const onCheck = useCallback(() => {
+    const pureResult = result.toLowerCase().replace(" ", "");
+
+    if (Array.isArray(props.question.correct)) {
+      props.question.correct.forEach((item) => {
+        console.log(item.toLowerCase().replace(" ", ""), pureResult);
+        if (item.toLowerCase().replace(" ", "") === pureResult) {
+          console.log("Correct!");
+          setIsCorrect(true);
+        } else {
+          setIsCorrect(false);
+        }
+      });
+    } else {
+      setIsCorrect(pureResult === props.question.correct.toLowerCase().replace(" ", ""));
+    }
+
+    props.setIsModalOpen(true);
+  }, [result, props.question.correct]);
+
+  useEffect(() => {
+    if (isCorrect) {
+      props.setScore(props.score + 1);
+    } else {
+      props.setScore(0);
+    }
+  }, [isCorrect]);
+
+  useEffect(() => {
+    setResult(null);
+  }, [props.questionCounter]);
 
   return (
     <View
@@ -192,8 +274,8 @@ export const LevelQuizz = (props) => {
         </Text>
       </View>
       <View style={{ height: "8%" }}>
-        <Text style={{ fontSize: 15, color: "#ec9706", marginTop: "3%", fontWeight: "700" }}>
-          {getPadName()}
+        <Text style={{ fontSize: 15, color: colors.textGrey, marginTop: "3%", fontWeight: "700" }}>
+          {"Skloňuj slovo v závorkách"}
         </Text>
       </View>
 
@@ -203,7 +285,6 @@ export const LevelQuizz = (props) => {
           color={colors.green}
         />
       </View>
-
       <Modal
         animationType="fade"
         transparent={true}
@@ -212,22 +293,24 @@ export const LevelQuizz = (props) => {
           props.setIsModalOpen(!props.isModalOpen);
         }}
       >
-        <View style={styles.centeredView}>
-          {console.log("props.question.correct", props.question.correct)}
+        <Pressable style={styles.centeredView} onPress={nextHanle}>
           <View
             style={
-              props.question.correct.includes(result)
+              (!props.modeInput && props.question.correct.includes(result)) ||
+              (props.modeInput && isCorrect)
                 ? styles.modalCorrectView
                 : styles.modalInorrectView
             }
           >
-            {props.question.correct.includes(result)
+            {(!props.modeInput && props.question.correct.includes(result)) ||
+            (props.modeInput && isCorrect)
               ? renderCorrectModalText()
               : renderIncorrectModalText()}
             <View style={styles.buttonContainer}>
               <Pressable
                 style={
-                  props.question.correct.includes(result)
+                  (!props.modeInput && props.question.correct.includes(result)) ||
+                  (props.modeInput && isCorrect)
                     ? styles.correctButton
                     : styles.incorrectButton
                 }
@@ -247,40 +330,40 @@ export const LevelQuizz = (props) => {
                   setIsRuleModalOpen(!isRuleModalOpen);
                 }}
               >
-                {console.log("props.rule", props.rule)}
                 <ModalRule
-                  rule={props.rule}
+                  rule={props.question.rule}
                   setIsRuleModalOpen={setIsRuleModalOpen}
                   padName={props.padName}
+                  ispractice={true}
                 />
               </Modal>
             </View>
           </View>
-        </View>
+        </Pressable>
       </Modal>
 
-      <View style={styles.container}>
-        <Text style={styles.question}>{props.question.sentance}</Text>
-        {renderVariants()}
+      <View style={{ width: "100%", height: "78%" }}>
+        {props.modeInput ? renderInput() : renderVariants()}
       </View>
     </View>
   );
 };
 
-export default LevelQuizz;
+export default PracticeQuizz;
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     width: "100%",
     padding: "10%",
+    backgroundColor: colors.lightGrey,
     justifyContent: "flex-start",
   },
 
   question: {
     color: "black",
     fontSize: 27,
-    marginBottom: `10%`,
+    paddingBottom: "10%",
   },
 
   variant: {

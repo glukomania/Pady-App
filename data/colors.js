@@ -8,4 +8,5 @@ export const colors = {
   correctModalText: "#193e04",
   textGrey: "#949494",
   darkGrey: "#696969",
+  lightGrey: "#f6f6f6",
 };

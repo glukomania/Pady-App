@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { StyleSheet, Text, View, Pressable } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import Counter from "react-native-counters";
+import { colors } from "../data/colors";
 
 export const Settings = (props) => {
   const [progress, setProgress] = useState(props.storageProgress);
@@ -10,11 +11,11 @@ export const Settings = (props) => {
   const [type, setType] = useState();
 
   const clearProgressPad = async () => {
-    AsyncStorage.removeItem("pad").then(alert("pad is cleared"));
+    AsyncStorage.removeItem("pad");
   };
 
   const clearProgressType = async () => {
-    AsyncStorage.removeItem("type").then(alert("type is cleared"));
+    AsyncStorage.removeItem("type").then(alert("Bude aplikováno po restartu aplikace."));
   };
 
   const readStoragePad = async () => {
@@ -48,8 +49,8 @@ export const Settings = (props) => {
   return (
     <View style={{ flex: 1, margin: "10%" }}>
       <View style={{ marginBottom: "20%" }}>
-        <Text style={{ marginBottom: "5%", fontWeight: "700", fontSize: 18 }}>
-          Number of correct answers to go to the next level:
+        <Text style={{ marginBottom: "5%", fontWeight: "400", fontSize: 18 }}>
+          Počet správných odpovědí pro přechod na další pád:
         </Text>
         <Counter
           start={props.maxScoreToWin}
@@ -63,31 +64,32 @@ export const Settings = (props) => {
       </View>
 
       <View>
-        <Text style={{ fontSize: 18 }}>
+        {/* <Text style={{ fontSize: 18 }}>
           <Text style={{ fontWeight: "700" }}>{"Current level: "}</Text>
           {progress && progress.pad !== undefined ? progress.pad + " " + progress.type : "no data"}
-        </Text>
+        </Text> */}
         <Pressable
           onPress={() => {
             clearProgressPad();
             clearProgressType();
             props.setShouldReadStorage(true);
           }}
-          style={styles.button}
         >
-          <Text style={styles.buttonText}>{"Erase study progress"}</Text>
+          <Text style={{ color: colors.orange, fontSize: "18" }}>
+            {"Vymazat pokrok v tréninku"}
+          </Text>
         </Pressable>
       </View>
 
-      <Pressable
+      {/* <Pressable
         onPress={() => {
           readStoragePad();
           readStorageType();
         }}
-        style={styles.button}
+        style={{ marginTop: "5%" }}
       >
-        <Text style={styles.buttonText}>{"Read data from storage"}</Text>
-      </Pressable>
+        <Text style={{ color: colors.orange, fontSize: "18" }}>{"Read data from storage"}</Text>
+      </Pressable> */}
     </View>
   );
 };
