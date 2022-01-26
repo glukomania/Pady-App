@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect, useMemo, useCallback } from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { StyleSheet, Text, View, Alert } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
@@ -83,6 +83,7 @@ export const Training = (props) => {
           score === props.maxScoreToWin
         ) {
           setIsModalOpen(false);
+          console.log("extra in question");
           navigation.navigate("LevelWon");
           break;
         }
@@ -97,26 +98,30 @@ export const Training = (props) => {
 
   const padName = useMemo(() => rules[currentLevel.pad].question);
 
-  const saveProgress = () => {
+  const saveProgress = useCallback(() => {
+    console.log("== save progress");
+    console.log("currentLevel", currentLevel);
+
     let newProgress;
     if (currentLevel.type === "singular") {
       newProgress = { pad: currentLevel.pad, type: "plural" };
-    } else if (currentLevel.type === "plural" && currentLevel.pad < 7) {
+    } else if (currentLevel.type === "plural") {
       newProgress = { pad: currentLevel.pad, type: "quizz" };
     } else if (currentLevel.type === "quizz" && currentLevel.pad < 7) {
       newProgress = { pad: currentLevel.pad + 1, type: "singular" };
     } else if (currentLevel.type === "quizz" && currentLevel.pad === 7) {
       newProgress = { pad: 1, type: "singular" };
     } else {
-      setIsModalOpen(false);
-      navigation.navigate("LevelWon");
-      newProgress = { pad: 7, type: "quizz" };
+      console.log("no way to get here", currentLevel);
+      // setIsModalOpen(false);
+      // navigation.navigate("LevelWon");
+      // newProgress = { pad: 1, type: "singular" };
     }
 
     setCurrentLevel(newProgress);
     saveProgressPad(newProgress.pad);
     saveProgressType(newProgress.type);
-  };
+  }, [currentLevel]);
 
   useEffect(() => {
     props.storageProgress && setCurrentLevel(props.storageProgress);
@@ -125,7 +130,9 @@ export const Training = (props) => {
   useEffect(() => {
     if (score === props.maxScoreToWin) {
       setIsModalOpen(false);
+      console.log("extra in UE?");
       navigation.navigate("LevelWon");
+      saveProgress();
     }
   }, [score, props.storageProgress]);
 
@@ -223,18 +230,18 @@ export const Training = (props) => {
             {() => (
               <LevelWon
                 onPress={() => {
-                  saveProgress();
+                  // saveProgress();
                   navigation.navigate("LevelInfo");
                 }}
                 onOkPress={() => {
-                  saveProgress();
+                  // saveProgress();
                   navigation.navigate("LevelInfo");
                 }}
                 onQuizzPress={() => {
-                  setScore(0);
-                  setPastQuestions([]);
-                  setQuestionCounter(0);
-                  saveProgress();
+                  // setScore(0);
+                  // setPastQuestions([]);
+                  // setQuestionCounter(0);
+                  // saveProgress();
                   navigation.navigate("MiddleQuizz");
                 }}
                 currentLevel={currentLevel}
@@ -242,9 +249,14 @@ export const Training = (props) => {
                   setScore(0);
                   setPastQuestions([]);
                   setQuestionCounter(0);
-                  saveProgress();
+                  // saveProgress();
                   navigation.navigate("LevelStart");
                 }}
+                setScore={setScore}
+                setPastQuestions={setPastQuestions}
+                setQuestionCounter={setQuestionCounter}
+                saveProgress={saveProgress}
+                score={score}
               />
             )}
           </Stack.Screen>

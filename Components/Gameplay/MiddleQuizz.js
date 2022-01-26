@@ -8,17 +8,23 @@ import { ModalRule } from "./ModalRule";
 
 const Item = (props) => {
   const onPressHandle = useCallback(() => {
+    console.log("middle");
+    console.log("props.result", props.result);
+    console.log("props.item", props.item);
+    console.log("props.score", props.score);
     if (props.result === null) {
       if (props.item === props.correct || props.correct.includes(props.item)) {
+        console.log("here");
         props.setScore(props.score + 1);
       } else {
+        console.log("or here");
         props.setScore(0);
       }
-      console.log("props.item", props.item);
+
       props.setResult(props.item);
       props.setIsModalOpen(true);
     }
-  }, [props.result, props.item, props.correct]);
+  }, [props.result, props.item, props.correct, props.score]);
 
   const getBoderColor = () => {
     if (
@@ -140,6 +146,10 @@ export const MiddleQuizz = (props) => {
       setResult(null);
     }
   }, [props.score]);
+
+  useEffect(() => {
+    props.setScore(0);
+  }, []);
 
   return (
     <View

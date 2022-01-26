@@ -247,7 +247,7 @@ export const examples = {
         word: "řidič",
         sentance: "pracuj jako ...",
         model: "muž",
-        variants: ["řidič", "řidičem", "řidiču", "řidič", "řidičům"],
+        variants: ["řidič", "řidičem", "řidiču", "řidičům"],
         correct: "řidič",
         rule: {
           pad: 1,
@@ -509,7 +509,7 @@ export const examples = {
       },
       {
         word: "stroj",
-        sentance: "Těchto ... je jednoduchý",
+        sentance: "Tento ... je jednoduchý",
         model: "čaj",
         variants: ["stroj", "strojem", "stroju"],
         correct: "stroj",
@@ -1892,8 +1892,8 @@ export const examples = {
         word: "čtvrť",
         sentance: "Naše ... jsou největší",
         model: "kancelaře",
-        variants: ["čtvrťi", "čtvrťe", "čtvrťy"],
-        correct: ["čtvrťe"],
+        variants: ["čtvrťi", "čtvrtě", "čtvrťe"],
+        correct: ["čtvrtě"],
         rule: {
           pad: 1,
           type: "plural",
@@ -2684,11 +2684,11 @@ export const examples = {
       {
         word: "Anna",
         sentance: "Odpovídám pouze kvůli ...",
-        model: "kavy",
-        variants: ["Anny", "Anne", "Annu"],
-        correct: ["Anny"],
+        model: "kavě",
+        variants: ["Anny", "Anně", "Annu"],
+        correct: ["Anně"],
         rule: {
-          pad: 2,
+          pad: 3,
           type: "singular",
         },
       },
@@ -3673,7 +3673,7 @@ export const examples = {
       },
       {
         word: "programátori",
-        sentance: " Nedostatek IT odborníků a ... na trhu práce není žádné tajemství",
+        sentance: "Nedostatek IT odborníků a ... na trhu práce není žádné tajemství",
         model: "studentů",
         variants: ["programátory", "programátorů", "programátoru"],
         correct: ["programátorů"],
@@ -4001,7 +4001,7 @@ export const examples = {
         word: "dárci",
         sentance: "Český registr ... krvetvorných buněk",
         model: "soudců",
-        variants: ["dárců", "dárci", "dárců"],
+        variants: ["dárce", "dárci", "dárců"],
         correct: ["dárců"],
         rule: {
           pad: 2,
@@ -5520,7 +5520,7 @@ export const examples = {
         word: "bolest",
         sentance: "Kvůli ... zad se nezúčastní tradiční piety",
         model: "místnosti",
-        variants: ["bolestě", "bolesti", "bolesti+"],
+        variants: ["bolestě", "bolesti", "bolestí"],
         correct: ["bolesti"],
         rule: {
           pad: 3,
@@ -6375,8 +6375,8 @@ export const examples = {
         sentance:
           "Dostatek úložných prostor je zajištěn díky vestavěným ... v ložnici po obvodu celé zdi.",
         model: "kancelářím",
-        variants: ["skříňim", "skříňím", "skříňem"],
-        correct: ["skříňím"],
+        variants: ["skříňim", "skříním", "skříňem"],
+        correct: ["skříním"],
         rule: {
           pad: 3,
           type: "plural",
@@ -8000,7 +8000,7 @@ export const examples = {
         sentance:
           "Proto není na místě označovat za ... lidi ty, kdo jsou za všech okolností poddajní.",
         model: "dobré",
-        variants: ["poslušné", "poslušné", "poslušné"],
+        variants: ["poslušne", "poslušní", "poslušné"],
         correct: ["poslušné"],
         rule: {
           pad: 4,
@@ -8745,7 +8745,7 @@ export const examples = {
         sentance: "Nyní poprvé vidím ... všech tří institucí – Rady, Komise a Parlamentu.",
         model: "kolegy",
         variants: ["předsedy", "předsedové", "předsed"],
-        correct: ["poslankyně"],
+        correct: ["předsedy"],
         rule: {
           pad: 4,
           type: "plural",
@@ -9622,7 +9622,7 @@ export const examples = {
         word: "dárci",
         sentance: "Milí ..., děkujeme všem, kteří přišli letos darovat krev.",
         model: "soudci! soudcové!",
-        variants: ["dárcí", "dárci", "dárcove"],
+        variants: ["dárcí", "dárce", "dárcové"],
         correct: ["dárci", "dárcové"],
         rule: {
           pad: 5,
@@ -12242,7 +12242,7 @@ export const examples = {
         sentance: "V České republice je Parlament výhradním ...",
         model: "soudcem",
         variants: ["zákonodárcem", "zákonodárce", "zákonodárcím"],
-        correct: ["malířem"],
+        correct: ["zákonodárcem"],
         rule: {
           pad: 7,
           type: "singular",
@@ -12440,7 +12440,7 @@ export const examples = {
         sentance: "Být starostkou a ... není kumulace funkcí, ale synergie. ",
         model: "restaurací",
         variants: ["poslankyni", "poslankyně", "poslankyní"],
-        correct: ["skříní"],
+        correct: ["poslankyní"],
         rule: {
           pad: 7,
           type: "singular",
@@ -12991,7 +12991,7 @@ export const examples = {
         word: "doktoři",
         sentance: "Špatná zkušenost s ... už rozebírají maminky na webu.",
         model: "studenty, studentama",
-        variants: ["doktořy", "doktorami", "doktoři"],
+        variants: ["doktořy", "doktorami", "doktoři", "doktory"],
         correct: ["doktory", "doktorama"],
         rule: {
           pad: 7,
@@ -13684,7 +13684,7 @@ export const examples = {
         word: "záležitosti",
         sentance: " Podívej, slíbil jsem, že se moje záležitosti nestanou tvými ...",
         model: "místnostmi, místnostma",
-        variants: ["záležitosti", "záležitostemi", "záležitostami"],
+        variants: ["záležitosti", "záležitostemi", "záležitostmi"],
         correct: ["záležitostmi", "záležitostma"],
         rule: {
           pad: 7,

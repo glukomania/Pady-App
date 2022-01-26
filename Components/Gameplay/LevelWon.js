@@ -2,6 +2,7 @@ import React, { useCallback } from "react";
 import { StyleSheet, Text, View, Pressable } from "react-native";
 import { colors } from "../../data/colors";
 import Ionicons from "react-native-vector-icons/Ionicons";
+import { useEffect } from "react/cjs/react.development";
 
 export const LevelWon = (props) => {
   const renderSumQuizz = () => {
@@ -174,8 +175,8 @@ export const LevelWon = (props) => {
                 paddingRight: "10%",
               }}
             >
-              {`Teďka ${props.currentLevel.pad}. pad máte hotový. Jdeme dál na ${
-                props.currentLevel.pad + 1
+              {`Teďka ${props.currentLevel.pad - 1}. pad máte hotový. Jdeme dál na ${
+                props.currentLevel.pad
               }.?`}
             </Text>
           </View>
@@ -259,15 +260,30 @@ export const LevelWon = (props) => {
   };
 
   const renderWinScreen = useCallback(() => {
+    // if (
+    //   props.currentLevel.pad < 7 ||
+    //   (props.currentLevel.pad === 7 && props.currentLevel.type !== "quizz")
+    // ) {
+    //   if (props.currentLevel.type === "quizz") {
+    //     return renderQuizzPassed();
+    //   } else if (props.currentLevel.type === "singular") {
+    //     return renderCongrats();
+    //   } else if (props.currentLevel.type === "plural") {
+    //     return renderSumQuizz();
+    //   }
+    // } else {
+    //   return renderTotalWin();
+    // }
+
     if (
       props.currentLevel.pad < 7 ||
       (props.currentLevel.pad === 7 && props.currentLevel.type !== "quizz")
     ) {
-      if (props.currentLevel.type === "quizz") {
+      if (props.currentLevel.type === "singular") {
         return renderQuizzPassed();
-      } else if (props.currentLevel.type === "singular") {
-        return renderCongrats();
       } else if (props.currentLevel.type === "plural") {
+        return renderCongrats();
+      } else if (props.currentLevel.type === "quizz") {
         return renderSumQuizz();
       }
     } else {
@@ -275,6 +291,16 @@ export const LevelWon = (props) => {
     }
   }, [props.currentLevel]);
 
+  useEffect(() => {
+    console.log("props", props);
+    return () => {
+      console.log("unmount levelwon");
+      props.setScore(0);
+      props.setPastQuestions([]);
+      props.setQuestionCounter(0);
+      // props.saveProgress();
+    };
+  }, []);
   return <View style={{ flex: 1 }}>{renderWinScreen()}</View>;
 };
 
