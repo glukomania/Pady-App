@@ -196,6 +196,29 @@ export const Training = (props) => {
             )}
           />
 
+          <Stack.Screen
+            name="MiddleQuizz"
+            options={{ headerShown: false }}
+            children={() => (
+              <MiddleQuizz
+                question={quizzQuestion}
+                onPress={() => {
+                  navigation.navigate("MiddleQuizz");
+                }}
+                score={score}
+                setScore={setScore}
+                setQuestionCounter={setQuestionCounter}
+                questionCounter={questionCounter}
+                maxScoreToWin={props.maxScoreToWin}
+                rule={quizzQuestion.rule}
+                currentLevel={currentLevel}
+                padName={padName}
+                isModalOpen={isModalOpen}
+                setIsModalOpen={setIsModalOpen}
+              />
+            )}
+          />
+
           <Stack.Screen name="LevelWon" options={{ headerShown: false }}>
             {() => (
               <LevelWon

@@ -18,7 +18,7 @@ export const Practice = () => {
 
   const [score, setScore] = useState(0);
 
-  const maxScoreToWin = 2;
+  const maxScoreToWin = 20;
 
   const pool = useMemo(() => {
     let poolQuestions = [];

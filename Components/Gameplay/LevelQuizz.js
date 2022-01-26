@@ -213,7 +213,6 @@ export const LevelQuizz = (props) => {
         }}
       >
         <View style={styles.centeredView}>
-          {console.log("props.question.correct", props.question.correct)}
           <View
             style={
               props.question.correct.includes(result)
@@ -247,7 +246,6 @@ export const LevelQuizz = (props) => {
                   setIsRuleModalOpen(!isRuleModalOpen);
                 }}
               >
-                {console.log("props.rule", props.rule)}
                 <ModalRule
                   rule={props.rule}
                   setIsRuleModalOpen={setIsRuleModalOpen}
@@ -342,7 +340,7 @@ const styles = StyleSheet.create({
   },
   correctButton: {
     paddingTop: "3%",
-    paddingBottom: "2%",
+    paddingBottom: "5%",
     backgroundColor: colors.green,
     width: "100%",
     justifyContent: "center",
@@ -350,7 +348,7 @@ const styles = StyleSheet.create({
   },
   incorrectButton: {
     paddingTop: "3%",
-    paddingBottom: "2%",
+    paddingBottom: "5%",
     backgroundColor: colors.red,
     width: "100%",
     justifyContent: "center",

@@ -263,8 +263,6 @@ export const LevelWon = (props) => {
       props.currentLevel.pad < 7 ||
       (props.currentLevel.pad === 7 && props.currentLevel.type !== "quizz")
     ) {
-      console.log(props.currentLevel.type);
-      console.log(props.currentLevel.pad);
       if (props.currentLevel.type === "quizz") {
         return renderQuizzPassed();
       } else if (props.currentLevel.type === "singular") {
@@ -273,7 +271,6 @@ export const LevelWon = (props) => {
         return renderSumQuizz();
       }
     } else {
-      console.log("TOTAL WIN");
       return renderTotalWin();
     }
   }, [props.currentLevel]);

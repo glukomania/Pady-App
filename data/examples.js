@@ -5465,7 +5465,7 @@ export const examples = {
         sentance: "Díky ... jsem toto místo objevil.",
         model: "kolegovi",
         variants: ["předsedovi", "předsedě", "předsedu"],
-        correct: ["posteli"],
+        correct: ["předsedovi"],
         rule: {
           pad: 3,
           type: "singular",
@@ -5487,7 +5487,7 @@ export const examples = {
         sentance: "Pár otázek k ... a údržbě obecně.",
         model: "kolegovi",
         variants: ["banditu", "bandite", "banditovi"],
-        correct: ["posteli"],
+        correct: ["banditovi"],
         rule: {
           pad: 3,
           type: "singular",
@@ -9258,17 +9258,6 @@ export const examples = {
         model: "soudce!",
         variants: ["zákonodárci", "zákonodárco", "zákonodárce"],
         correct: ["zákonodárce"],
-        rule: {
-          pad: 5,
-          type: "singular",
-        },
-      },
-      {
-        word: "přítelkyně",
-        sentance: "Ó!, mé milý ..., za pomýlené to bylo, vdát ze za muže něj věku!",
-        model: "kolegyně!",
-        variants: ["přítelkyni", "přítelkyne", "přítelkyně"],
-        correct: ["přítelkyně"],
         rule: {
           pad: 5,
           type: "singular",

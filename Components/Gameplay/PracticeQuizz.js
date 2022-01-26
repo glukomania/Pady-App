@@ -190,6 +190,7 @@ export const PracticeQuizz = (props) => {
           }}
         >
           <Text style={styles.question}>
+            {}
             {props.question.sentance.replace("...", `(${props.question.word})`)}
           </Text>
           <View style={{ height: "80%" }}>
@@ -215,7 +216,6 @@ export const PracticeQuizz = (props) => {
               }}
             >
               <TextInput onChangeText={setResult} value={result} style={{ flex: 1 }} />
-              {console.log(props.question.correct)}
               <Ionicons name={"send"} size={25} color={colors.orange} onPress={onCheck} />
             </View>
           </View>
@@ -231,9 +231,7 @@ export const PracticeQuizz = (props) => {
 
     if (Array.isArray(props.question.correct)) {
       props.question.correct.forEach((item) => {
-        console.log(item.toLowerCase().replace(" ", ""), pureResult);
         if (item.toLowerCase().replace(" ", "") === pureResult) {
-          console.log("Correct!");
           setIsCorrect(true);
         } else {
           setIsCorrect(false);
@@ -293,7 +291,7 @@ export const PracticeQuizz = (props) => {
           props.setIsModalOpen(!props.isModalOpen);
         }}
       >
-        <Pressable style={styles.centeredView} onPress={nextHanle}>
+        <Pressable style={styles.centeredView}>
           <View
             style={
               (!props.modeInput && props.question.correct.includes(result)) ||
@@ -425,7 +423,7 @@ const styles = StyleSheet.create({
   },
   correctButton: {
     paddingTop: "3%",
-    paddingBottom: "2%",
+    paddingBottom: "5%",
     backgroundColor: colors.green,
     width: "100%",
     justifyContent: "center",
@@ -433,7 +431,7 @@ const styles = StyleSheet.create({
   },
   incorrectButton: {
     paddingTop: "3%",
-    paddingBottom: "2%",
+    paddingBottom: "5%",
     backgroundColor: colors.red,
     width: "100%",
     justifyContent: "center",

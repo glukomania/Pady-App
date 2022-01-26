@@ -2,6 +2,7 @@ import React, { useState, useCallback } from "react";
 import { StyleSheet, Text, View, Pressable, TouchableOpacity, FlatList, Modal } from "react-native";
 import { ProgressBar } from "react-native-paper";
 import Ionicons from "react-native-vector-icons/Ionicons";
+import { useEffect } from "react/cjs/react.development";
 import { colors } from "../../data/colors";
 import { ModalRule } from "./ModalRule";
 
@@ -13,6 +14,7 @@ const Item = (props) => {
       } else {
         props.setScore(0);
       }
+      console.log("props.item", props.item);
       props.setResult(props.item);
       props.setIsModalOpen(true);
     }
@@ -55,6 +57,7 @@ export const MiddleQuizz = (props) => {
   const [isRuleModalOpen, setIsRuleModalOpen] = useState(false);
 
   const nextHanle = useCallback(() => {
+    console.log("dal is pressed");
     setResult(null);
     props.setQuestionCounter(props.questionCounter + 1);
     props.onPress();
@@ -131,6 +134,12 @@ export const MiddleQuizz = (props) => {
       </View>
     );
   };
+
+  useEffect(() => {
+    if (props.score === 0) {
+      setResult(null);
+    }
+  }, [props.score]);
 
   return (
     <View
@@ -312,7 +321,7 @@ const styles = StyleSheet.create({
   },
   correctButton: {
     paddingTop: "3%",
-    paddingBottom: "2%",
+    paddingBottom: "5%",
     backgroundColor: colors.green,
     width: "100%",
     justifyContent: "center",
@@ -320,7 +329,7 @@ const styles = StyleSheet.create({
   },
   incorrectButton: {
     paddingTop: "3%",
-    paddingBottom: "2%",
+    paddingBottom: "5%",
     backgroundColor: colors.red,
     width: "100%",
     justifyContent: "center",

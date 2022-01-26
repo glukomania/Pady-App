@@ -5,7 +5,6 @@ import Ionicons from "react-native-vector-icons/Ionicons";
 
 export const PracticeWon = (props) => {
   const renderLevelUp = () => {
-    console.log("render level up");
     return (
       <View>
         <View

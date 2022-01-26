@@ -75,9 +75,7 @@ export const Settings = (props) => {
             props.setShouldReadStorage(true);
           }}
         >
-          <Text style={{ color: colors.orange, fontSize: "18" }}>
-            {"Vymazat pokrok v tréninku"}
-          </Text>
+          <Text style={{ color: colors.orange, fontSize: 18 }}>{"Vymazat pokrok v tréninku"}</Text>
         </Pressable>
       </View>
 
