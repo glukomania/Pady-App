@@ -275,32 +275,34 @@ export const LevelWon = (props) => {
     //   return renderTotalWin();
     // }
 
-    if (
-      props.currentLevel.pad < 7 ||
-      (props.currentLevel.pad === 7 && props.currentLevel.type !== "quizz")
-    ) {
-      if (props.currentLevel.type === "singular") {
-        return renderQuizzPassed();
-      } else if (props.currentLevel.type === "plural") {
-        return renderCongrats();
-      } else if (props.currentLevel.type === "quizz") {
-        return renderSumQuizz();
+    if (props.currentLevel.pad && props.currentLevel.type) {
+      if (
+        props.currentLevel.pad < 7 ||
+        (props.currentLevel.pad === 7 && props.currentLevel.type !== "quizz")
+      ) {
+        if (props.currentLevel.type === "singular") {
+          return renderQuizzPassed();
+        } else if (props.currentLevel.type === "plural") {
+          return renderCongrats();
+        } else if (props.currentLevel.type === "quizz") {
+          return renderSumQuizz();
+        }
+      } else {
+        return renderTotalWin();
       }
     } else {
-      return renderTotalWin();
+      alert("no some of props.currentLevel");
     }
   }, [props.currentLevel]);
 
-  useEffect(() => {
-    console.log("props", props);
-    return () => {
-      console.log("unmount levelwon");
-      props.setScore(0);
-      props.setPastQuestions([]);
-      props.setQuestionCounter(0);
-      // props.saveProgress();
-    };
-  }, []);
+  // useEffect(() => {
+  //   return () => {
+  //     props.setScore(0);
+  //     props.setPastQuestions([]);
+  //     props.setQuestionCounter(0);
+  //   };
+  // }, []);
+
   return <View style={{ flex: 1 }}>{renderWinScreen()}</View>;
 };
 

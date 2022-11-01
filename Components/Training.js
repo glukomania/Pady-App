@@ -1,150 +1,141 @@
-import React, { useState, useEffect, useMemo, useCallback } from "react";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { StyleSheet, Text, View, Alert } from "react-native";
-import AsyncStorage from "@react-native-async-storage/async-storage";
-import { LevelStart } from "./Gameplay/LevelStart";
-import { LevelInfo } from "./Gameplay/LevelInfo";
-import { LevelQuizz } from "./Gameplay/LevelQuizz";
-import { MiddleQuizz } from "./Gameplay/MiddleQuizz";
-import { LevelWon } from "./Gameplay/LevelWon";
-import { examples } from "../data/examples.js";
-import { rules } from "../data/rules.js";
-import { useNavigation } from "@react-navigation/native";
+import React, { useState, useEffect, useMemo, useCallback } from 'react'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import { StyleSheet, Text, View, Alert } from 'react-native'
+import AsyncStorage from '@react-native-async-storage/async-storage'
+import { LevelStart } from './Gameplay/LevelStart'
+import { LevelInfo } from './Gameplay/LevelInfo'
+import { LevelQuizz } from './Gameplay/LevelQuizz'
+import { MiddleQuizz } from './Gameplay/MiddleQuizz'
+import { LevelWon } from './Gameplay/LevelWon'
+import { examples } from '../data/examples.js'
+import { rules } from '../data/rules.js'
+import { useNavigation } from '@react-navigation/native'
 
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator()
 
 export const Training = (props) => {
-  const [score, setScore] = useState(0);
-  const [questionCounter, setQuestionCounter] = useState(0);
-  const navigation = useNavigation();
-  const [pastQuestions, setPastQuestions] = useState([]);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isQuizzPassed, setIsQuizzPassed] = useState(false);
+  const [score, setScore] = useState(0)
+  const [questionCounter, setQuestionCounter] = useState(0)
+  const navigation = useNavigation()
+  const [pastQuestions, setPastQuestions] = useState([])
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   const [currentLevel, setCurrentLevel] = useState(
     props.storageProgress || {
       pad: 1,
-      type: "singular",
-    }
-  );
+      type: 'singular',
+    },
+  )
 
   const saveProgressPad = async (pad) => {
     try {
-      await AsyncStorage.setItem("pad", pad.toString());
+      await AsyncStorage.setItem('pad', pad.toString())
     } catch (error) {
       // Error saving data
-      console.log("Error saving pad", error);
+      alert(error)
     }
-  };
+  }
 
   const saveProgressType = async (type) => {
     try {
-      await AsyncStorage.setItem("type", type);
+      await AsyncStorage.setItem('type', type)
     } catch (error) {
       // Error saving data
-      console.log("Error saving type", error);
+      alert(error)
     }
-  };
+  }
 
   const quizzQuestion = useMemo(() => {
-    let poolQuestions = [];
+    let poolQuestions = []
 
     for (let i = 1; i <= currentLevel.pad; i++) {
-      const newPool = examples[i].singular.concat(examples[i].plural);
+      const newPool = examples[i].singular.concat(examples[i].plural)
 
-      poolQuestions = poolQuestions.concat(newPool);
+      poolQuestions = poolQuestions.concat(newPool)
     }
 
-    let randNumber = Math.floor(Math.random() * poolQuestions.length);
+    let randNumber = Math.floor(Math.random() * poolQuestions.length)
 
     while (pastQuestions.includes(randNumber)) {
-      randNumber = Math.floor(Math.random() * poolQuestions.length);
+      randNumber = Math.floor(Math.random() * poolQuestions.length)
       if (pastQuestions.length === poolQuestions.length) {
-        setPastQuestions([]);
+        setPastQuestions([])
       }
     }
-    setPastQuestions([...pastQuestions, randNumber]);
+    setPastQuestions([...pastQuestions, randNumber])
 
-    return poolQuestions[randNumber];
-  }, [questionCounter, currentLevel]);
+    return poolQuestions[randNumber]
+  }, [questionCounter, currentLevel])
 
   const question = useMemo(() => {
-    if (currentLevel.type !== "quizz") {
+    if (currentLevel.type !== 'quizz') {
       let randNumber = Math.floor(
-        Math.random() * examples[currentLevel.pad][currentLevel.type].length
-      );
+        Math.random() * examples[currentLevel.pad][currentLevel.type].length,
+      )
 
       while (pastQuestions.includes(randNumber)) {
         randNumber = Math.floor(
-          Math.random() * examples[currentLevel.pad][currentLevel.type].length
-        );
+          Math.random() * examples[currentLevel.pad][currentLevel.type].length,
+        )
         if (
           pastQuestions.length === examples[currentLevel.pad][currentLevel.type].length ||
           score === props.maxScoreToWin
         ) {
-          setIsModalOpen(false);
-          console.log("extra in question");
-          navigation.navigate("LevelWon");
-          break;
+          setIsModalOpen(false)
+          navigation.navigate('LevelWon')
+          break
         }
       }
-      setPastQuestions([...pastQuestions, randNumber]);
+      setPastQuestions([...pastQuestions, randNumber])
 
-      return examples[currentLevel.pad][currentLevel.type][randNumber];
+      return examples[currentLevel.pad][currentLevel.type][randNumber]
     } else {
-      return quizzQuestion;
+      return quizzQuestion
     }
-  }, [questionCounter, currentLevel, quizzQuestion]);
+  }, [questionCounter, currentLevel, quizzQuestion])
 
-  const padName = useMemo(() => rules[currentLevel.pad].question);
+  const padName = useMemo(() => rules[currentLevel.pad].question)
 
   const saveProgress = useCallback(() => {
-    console.log("== save progress");
-    console.log("currentLevel", currentLevel);
-
-    let newProgress;
-    if (currentLevel.type === "singular") {
-      newProgress = { pad: currentLevel.pad, type: "plural" };
-    } else if (currentLevel.type === "plural") {
-      newProgress = { pad: currentLevel.pad, type: "quizz" };
-    } else if (currentLevel.type === "quizz" && currentLevel.pad < 7) {
-      newProgress = { pad: currentLevel.pad + 1, type: "singular" };
-    } else if (currentLevel.type === "quizz" && currentLevel.pad === 7) {
-      newProgress = { pad: 1, type: "singular" };
+    let newProgress
+    if (currentLevel.type === 'singular') {
+      newProgress = { pad: currentLevel.pad, type: 'plural' }
+    } else if (currentLevel.type === 'plural') {
+      newProgress = { pad: currentLevel.pad, type: 'quizz' }
+    } else if (currentLevel.type === 'quizz' && currentLevel.pad < 7) {
+      newProgress = { pad: currentLevel.pad + 1, type: 'singular' }
+    } else if (currentLevel.type === 'quizz' && currentLevel.pad === 7) {
+      newProgress = { pad: 1, type: 'singular' }
     } else {
-      console.log("no way to get here", currentLevel);
-      // setIsModalOpen(false);
-      // navigation.navigate("LevelWon");
-      // newProgress = { pad: 1, type: "singular" };
+      alert('no way to get here')
     }
 
-    setCurrentLevel(newProgress);
-    saveProgressPad(newProgress.pad);
-    saveProgressType(newProgress.type);
-  }, [currentLevel]);
+    setCurrentLevel(newProgress)
+    saveProgressPad(newProgress.pad)
+    saveProgressType(newProgress.type)
+  }, [currentLevel])
 
   useEffect(() => {
-    props.storageProgress && setCurrentLevel(props.storageProgress);
-  }, [props.storageProgress]);
+    props.storageProgress && setCurrentLevel(props.storageProgress)
+  }, [props.storageProgress])
 
   useEffect(() => {
     if (score === props.maxScoreToWin) {
-      setIsModalOpen(false);
-      console.log("extra in UE?");
-      navigation.navigate("LevelWon");
-      saveProgress();
+      saveProgress()
+      setIsModalOpen(false)
+      navigation.navigate('LevelWon')
     }
-  }, [score, props.storageProgress]);
+  }, [score, props.storageProgress])
 
   return (
     <View
       style={{
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#fff",
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#fff',
       }}
     >
-      <View style={{ width: "100%", height: "100%" }}>
+      <View style={{ width: '100%', height: '100%' }}>
         <Stack.Navigator>
           <Stack.Screen
             name="LevelStart"
@@ -152,12 +143,20 @@ export const Training = (props) => {
             children={() => (
               <LevelStart
                 onPress={() => {
-                  navigation.navigate("LevelInfo");
+                  try {
+                    navigation.navigate('LevelInfo')
+                  } catch (error) {
+                    Sentry.Native.captureException(error)
+                  }
                 }}
                 rule={currentLevel}
                 currentLevel={currentLevel}
                 onQuizzPress={() => {
-                  navigation.navigate("MiddleQuizz");
+                  try {
+                    setTimeout(navigation.navigate('MiddleQuizz'), 5000)
+                  } catch (error) {
+                    Sentry.Native.captureException(error)
+                  }
                 }}
               />
             )}
@@ -168,10 +167,10 @@ export const Training = (props) => {
             children={() => (
               <LevelInfo
                 onPress={() => {
-                  setScore(0);
-                  setPastQuestions([]);
-                  setQuestionCounter(0);
-                  navigation.navigate("LevelQuizz");
+                  setScore(0)
+                  setPastQuestions([])
+                  setQuestionCounter(0)
+                  navigation.navigate('LevelQuizz')
                 }}
                 rule={currentLevel}
                 currentLevel={currentLevel}
@@ -187,7 +186,7 @@ export const Training = (props) => {
               <LevelQuizz
                 question={question}
                 onPress={() => {
-                  navigation.navigate("LevelQuizz");
+                  navigation.navigate('LevelQuizz')
                 }}
                 score={score}
                 setScore={setScore}
@@ -210,7 +209,7 @@ export const Training = (props) => {
               <MiddleQuizz
                 question={quizzQuestion}
                 onPress={() => {
-                  navigation.navigate("MiddleQuizz");
+                  navigation.navigate('MiddleQuizz')
                 }}
                 score={score}
                 setScore={setScore}
@@ -230,27 +229,20 @@ export const Training = (props) => {
             {() => (
               <LevelWon
                 onPress={() => {
-                  // saveProgress();
-                  navigation.navigate("LevelInfo");
+                  navigation.navigate('LevelInfo')
                 }}
                 onOkPress={() => {
-                  // saveProgress();
-                  navigation.navigate("LevelInfo");
+                  navigation.navigate('LevelInfo')
                 }}
                 onQuizzPress={() => {
-                  // setScore(0);
-                  // setPastQuestions([]);
-                  // setQuestionCounter(0);
-                  // saveProgress();
-                  navigation.navigate("MiddleQuizz");
+                  navigation.navigate('MiddleQuizz')
                 }}
                 currentLevel={currentLevel}
                 onNePress={() => {
-                  setScore(0);
-                  setPastQuestions([]);
-                  setQuestionCounter(0);
-                  // saveProgress();
-                  navigation.navigate("LevelStart");
+                  setScore(0)
+                  setPastQuestions([])
+                  setQuestionCounter(0)
+                  navigation.navigate('LevelStart')
                 }}
                 setScore={setScore}
                 setPastQuestions={setPastQuestions}
@@ -263,7 +255,7 @@ export const Training = (props) => {
         </Stack.Navigator>
       </View>
     </View>
-  );
-};
+  )
+}
 
-export default Training;
+export default Training

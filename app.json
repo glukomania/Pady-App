@@ -2,7 +2,7 @@
   "expo": {
     "name": "Pady",
     "slug": "Pady",
-    "version": "1.1.0",
+    "version": "1.3.7",
     "assetBundlePatterns": [
       "**/*"
     ],
@@ -15,6 +15,21 @@
       "image": "./assets/logo.png",
       "resizeMode": "contain",
       "backgroundColor": "#ec9706"
+    },
+    "plugins": [
+      "sentry-expo"
+    ],
+    "hooks": {
+      "postPublish": [
+        {
+          "file": "sentry-expo/upload-sourcemaps",
+          "config": {
+            "organization": "your sentry organization slug here",
+            "project": "your sentry project name here",
+            "authToken": "your auth token here"
+          }
+        }
+      ]
     }
   },
   "name": "Pady"
