@@ -115,6 +115,8 @@ export const Training = (props) => {
     saveProgressType(newProgress.type)
   }, [currentLevel])
 
+  useEffect(() => {}, [])
+
   useEffect(() => {
     props.storageProgress && setCurrentLevel(props.storageProgress)
   }, [props.storageProgress])

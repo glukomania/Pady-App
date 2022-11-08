@@ -13090,7 +13090,7 @@ export const examples = {
         word: 'nabídky',
         sentance: 'S jakými problémy se v souvislosti s ... potýkáte?',
         model: 'kávami, kavama',
-        variants: ['nabídkami', 'nabídkama', 'nabídky', , 'nabídki'],
+        variants: ['nabídkami', 'nabídkama', 'nabídky', 'nabídki'],
         correct: ['nabídkami', 'nabídkama'],
         rule: {
           pad: 7,

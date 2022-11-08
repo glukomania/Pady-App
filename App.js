@@ -7,19 +7,19 @@ import { Settings } from './Components/Settings'
 import { Info } from './Components/Info'
 import { Practice } from './Components/Practice'
 import AsyncStorage from '@react-native-async-storage/async-storage'
-import * as Sentry from 'sentry-expo'
+// import * as Sentry from 'sentry-expo'
 
 const Tab = createBottomTabNavigator()
 
 export default function App() {
-  Sentry.init({
-    dsn: 'https://f8a007ec62f84c2685b5a71e817fa704@o4504085906653184.ingest.sentry.io/4504085922971648',
-    enableInExpoDevelopment: true,
-    debug: true, // If `true`, Sentry will try to print out useful debugging information if something goes wrong with sending the event. Set it to `false` in production
-  })
+  // Sentry.init({
+  //   dsn: 'https://f8a007ec62f84c2685b5a71e817fa704@o4504085906653184.ingest.sentry.io/4504085922971648',
+  //   enableInExpoDevelopment: true,
+  //   debug: true, // If `true`, Sentry will try to print out useful debugging information if something goes wrong with sending the event. Set it to `false` in production
+  // })
 
   const [storageProgress, setStorageProgress] = useState({ pad: 1, type: 'singular' })
-  const [maxScoreToWin, setMaxScoreToWin] = useState(2)
+  const [maxScoreToWin, setMaxScoreToWin] = useState(15)
   const [shouldReadStorage, setShouldReadStorage] = useState(false)
 
   const readStoragePad = async () => {
@@ -43,8 +43,8 @@ export default function App() {
 
   useEffect(() => {
     console.log('==== The App is started ======')
-    readStoragePad()
-    readStorageType()
+    // readStoragePad()
+    // readStorageType()
   }, [])
 
   useEffect(() => {
