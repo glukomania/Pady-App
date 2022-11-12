@@ -25,6 +25,7 @@
     "react-native-counters": "^1.2.0",
     "react-native-file-logger": "^0.4.0",
     "react-native-gesture-handler": "~1.10.2",
+    "react-native-health": "^1.13.0",
     "react-native-iap": "^12.4.2",
     "react-native-ionicons": "^4.6.5",
     "react-native-keyboard-aware-scroll-view": "^0.9.5",

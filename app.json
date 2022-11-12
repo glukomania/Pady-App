@@ -18,7 +18,8 @@
       "backgroundColor": "#ec9706"
     },
     "plugins": [
-      "sentry-expo"
+      "sentry-expo",
+      "react-native-health"
     ],
     "hooks": {
       "postPublish": [
