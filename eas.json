@@ -1,9 +1,9 @@
 {
   "builds": {
     "android": {
-      "release": {
-        "workflow": "generic"
-      },
+    //   "release": {
+    //     "workflow": "generic"
+    //   },
     "development": {
       "developmentClient": true,
       "distribution": "internal"
