@@ -13,6 +13,11 @@
     "ios": {
       "release": {
         "workflow": "generic"
+      },
+      "development": {
+        "developmentClient": true,
+        "distribution": "internal",
+        "workflow": "generic"
       }
     }
   }
