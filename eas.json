@@ -1,9 +1,13 @@
 {
   "builds": {
     "android": {
+      "release": {
+        "workflow": "generic"
+      },
       "development": {
         "developmentClient": true,
-        "distribution": "internal"
+        "distribution": "internal",
+        "workflow": "generic"
       }
     },
     "ios": {
