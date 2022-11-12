@@ -7409,17 +7409,6 @@ export const examples = {
         },
       },
       {
-        word: 'čaj',
-        sentance: 'Hledáte kvalitní ...?',
-        model: 'čaj',
-        variants: ['čaj', 'čaj', 'čaj'],
-        correct: ['dárca'],
-        rule: {
-          pad: 4,
-          type: 'singular',
-        },
-      },
-      {
         word: 'pokoj',
         sentance: 'Správné barvy pro ... mladého člověka.',
         model: 'čaj',
@@ -7434,7 +7423,7 @@ export const examples = {
         word: 'nástroj',
         sentance: 'Skládání hudby pro ..., který je fyzicky dostupný pouze v Praze, bylo složité.',
         model: 'čaj',
-        variants: ['nástroj', 'nástroj', 'nástroj'],
+        variants: ['nástroj', 'nástrojovi', 'nástroju'],
         correct: ['nástroj'],
         rule: {
           pad: 4,
@@ -9726,8 +9715,8 @@ export const examples = {
         word: 'vzájemný',
         sentance: 'Tyto procesy jsou dlouhodobé a ve ... rozporu',
         model: 'dobrém',
-        variants: ['vzájemnem', 'vzájemnim', 'vzájemne'],
-        correct: ['vzájemnem'],
+        variants: ['vzájemném', 'vzájemnim', 'vzájemnem'],
+        correct: ['vzájemném'],
         rule: {
           pad: 6,
           type: 'singular',
@@ -12019,7 +12008,7 @@ export const examples = {
       },
       {
         word: 'sestra',
-        sentance: 'ak randit se ... nejlepšího kamaráda?',
+        sentance: 'Jak randit se ... nejlepšího kamaráda?',
         model: 'kávou',
         variants: ['sestra', 'sestru', 'sestrou'],
         correct: ['sestrou'],
@@ -12714,7 +12703,7 @@ export const examples = {
         word: 'poupě',
         sentance: 'Květ růže s ... na stonku s listy.',
         model: 'kuřetem',
-        variants: ['poupě', 'poupěm', 'poupě'],
+        variants: ['poupě', 'poupěm', 'poupětem'],
         correct: ['poupětem'],
         rule: {
           pad: 7,
@@ -13000,7 +12989,7 @@ export const examples = {
       },
       {
         word: 'obchody',
-        sentance: 'Vzhledem k atuálním vládním nařízením spadáme mezi ..., které mají otevřeno.',
+        sentance: 'Vzhledem k aktuálním vládním nařízením spadáme mezi ..., které mají otevřeno.',
         model: 'banány, banánama',
         variants: ['obchody', 'obchodi', 'obchodami'],
         correct: ['obchody', 'obchodama'],

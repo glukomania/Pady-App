@@ -134,10 +134,37 @@ export const LevelQuizz = (props) => {
 
     const rand = Math.floor(Math.random() * motivations.length)
     return (
-      <View>
-        <Text style={styles.modalCorrectText}>
-          <Text>{motivations[rand]}</Text>
-        </Text>
+      <View
+        style={{
+          padding: '10%',
+          paddingBottom: '4%',
+          flex: 1,
+          flexDirection: 'column',
+          width: '100%',
+        }}
+      >
+        <Pressable
+          onPress={() => {
+            setIsRuleModalOpen(true)
+          }}
+        >
+          <View
+            style={{
+              alignItems: 'flex-end',
+              marginRight: '-5%',
+            }}
+          >
+            <Ionicons name={'help-circle-outline'} size={25} color={'white'} />
+          </View>
+          <View
+            style={{
+              alignItems: 'center',
+              marginTop: '-8%',
+            }}
+          >
+            <Text style={{ fontSize: 22, fontWeight: '700' }}>{motivations[rand]}</Text>
+          </View>
+        </Pressable>
       </View>
     )
   }
@@ -300,7 +327,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#c5e1b6',
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
-    // padding: "10%",
     paddingBottom: '0%',
     shadowRadius: 4,
     elevation: 5,
@@ -340,7 +366,8 @@ const styles = StyleSheet.create({
   },
   correctButton: {
     paddingTop: '3%',
-    paddingBottom: '5%',
+    paddingBottom: '7%',
+    // marginBottom: '7%',
     backgroundColor: colors.green,
     width: '100%',
     justifyContent: 'center',
@@ -348,7 +375,7 @@ const styles = StyleSheet.create({
   },
   incorrectButton: {
     paddingTop: '3%',
-    paddingBottom: '5%',
+    paddingBottom: '7%',
     backgroundColor: colors.red,
     width: '100%',
     justifyContent: 'center',

@@ -3,7 +3,11 @@
     "android": {
       "release": {
         "workflow": "generic"
-      }
+      },
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+    }
     },
     "ios": {
       "release": {
