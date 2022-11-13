@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { StyleSheet, Text, View, Alert } from 'react-native'
+import { View, Modal, Text } from 'react-native'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import { LevelStart } from './Gameplay/LevelStart'
 import { LevelInfo } from './Gameplay/LevelInfo'
@@ -10,6 +10,7 @@ import { LevelWon } from './Gameplay/LevelWon'
 import { examples } from '../data/examples.js'
 import { rules } from '../data/rules.js'
 import { useNavigation } from '@react-navigation/native'
+import Purchases from 'react-native-purchases'
 
 const Stack = createNativeStackNavigator()
 
@@ -19,6 +20,7 @@ export const Training = (props) => {
   const navigation = useNavigation()
   const [pastQuestions, setPastQuestions] = useState([])
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [isSubsModalOpen, setIsSubsModalOpen] = useState(false)
 
   const [currentLevel, setCurrentLevel] = useState(
     props.storageProgress || {
@@ -115,7 +117,23 @@ export const Training = (props) => {
     saveProgressType(newProgress.type)
   }, [currentLevel])
 
-  useEffect(() => {}, [])
+  useEffect(() => {
+    console.log('==== Trainng screen is started ======')
+    const revenueCatInit = async () => {
+      Purchases.setDebugLogsEnabled(true)
+
+      if (Platform.OS === 'ios') {
+        await Purchases.configure({ apiKey: 'appl_mxIogORnjOEasSfQYoKMVAiEHSR' })
+        console.log('iOS? Gooood!')
+        setIsSubsModalOpen(true)
+      } else if (Platform.OS === 'android') {
+        console.log('Android?? Who ever need android??')
+        // await Purchases.configure({ apiKey: 'public_google_sdk_key' })
+      }
+    }
+
+    revenueCatInit()
+  }, [])
 
   useEffect(() => {
     props.storageProgress && setCurrentLevel(props.storageProgress)
@@ -137,6 +155,101 @@ export const Training = (props) => {
         backgroundColor: '#fff',
       }}
     >
+      <Modal
+        animationType="slide"
+        transparent={true}
+        visible={isSubsModalOpen}
+        onRequestClose={() => {
+          console.log('close condition')
+        }}
+      >
+        <View
+          style={{
+            width: '100%',
+            height: '100%',
+            backgroundColor: '#00000040',
+            paddingTop: '25%',
+            paddingLeft: '7%',
+            paddingRight: '7%',
+            paddingBottom: '25%',
+          }}
+        >
+          <View
+            style={{
+              flex: 1,
+              justifyContent: 'center',
+              alignItems: 'center',
+              backgroundColor: '#ffffff',
+              borderRadius: '20%',
+              paddingLeft: '7%',
+              paddingRight: '7%',
+            }}
+          >
+            <View>
+              <Text style={{ textAlign: 'center', fontSize: 25, fontWeight: '700' }}>
+                Vyber si typ předplatného
+              </Text>
+              <Text></Text>
+              <Text style={{ textAlign: 'center', fontSize: 25, color: '#ec9706' }}>
+                a my tě naučíme skloňovat!
+              </Text>
+
+              <View
+                style={{
+                  marginTop: '15%',
+                  height: '15%',
+                  borderRadius: '15%',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  backgroundColor: '#ec9706',
+                }}
+              >
+                <Text
+                  style={{ fontSize: 18, fontWeight: '700', color: 'white', paddingBottom: '2%' }}
+                >
+                  19 Kč / week
+                </Text>
+                <Text>with 3 days free trial</Text>
+              </View>
+              <View
+                style={{
+                  marginTop: '10%',
+                  height: '15%',
+                  borderRadius: '15%',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  backgroundColor: '#ec9706',
+                }}
+              >
+                <Text
+                  style={{ fontSize: 18, fontWeight: '700', color: 'white', paddingBottom: '2%' }}
+                >
+                  29 Kč / month
+                </Text>
+                <Text>with 3 days free trial</Text>
+              </View>
+              <View
+                style={{
+                  marginTop: '10%',
+                  height: '15%',
+                  borderRadius: '15%',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  backgroundColor: '#ec9706',
+                }}
+              >
+                <Text
+                  style={{ fontSize: 18, fontWeight: '700', color: 'white', paddingBottom: '2%' }}
+                >
+                  99 Kč / year
+                </Text>
+                <Text>with 3 days free trial</Text>
+              </View>
+            </View>
+            <Text>logs are here</Text>
+          </View>
+        </View>
+      </Modal>
       <View style={{ width: '100%', height: '100%' }}>
         <Stack.Navigator>
           <Stack.Screen

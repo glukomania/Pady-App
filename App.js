@@ -9,7 +9,6 @@ import { Practice } from './Components/Practice'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 // import * as Sentry from 'sentry-expo'
 import { Platform } from 'react-native'
-import Purchases from 'react-native-purchases'
 
 const Tab = createBottomTabNavigator()
 
@@ -45,19 +44,6 @@ export default function App() {
 
   useEffect(() => {
     console.log('==== The App is started ======')
-    const revenueCatInit = async () => {
-      Purchases.setDebugLogsEnabled(true)
-
-      if (Platform.OS === 'ios') {
-        await Purchases.configure({ apiKey: 'appl_mxIogORnjOEasSfQYoKMVAiEHSR' })
-        console.log('iOS? Gooood!')
-      } else if (Platform.OS === 'android') {
-        console.log('Android?? Who ever need android??')
-        // await Purchases.configure({ apiKey: 'public_google_sdk_key' })
-      }
-    }
-
-    revenueCatInit()
   }, [])
 
   useEffect(() => {
