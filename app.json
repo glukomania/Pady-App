@@ -2,13 +2,13 @@
   "expo": {
     "name": "Pady",
     "slug": "Pady",
-    "version": "2.0.3",
+    "version": "2.0.4",
     "assetBundlePatterns": [
       "**/*"
     ],
     "ios": {
       "bundleIdentifier": "com.glukomania.Pady",
-      "buildNumber": "2.0.3"
+      "buildNumber": "2.0.4"
     },
     "orientation": "portrait",
     "icon": "./assets/logo.png",
@@ -35,6 +35,11 @@
     },
     "android": {
       "package": "com.glukomania.Pady"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "016b5e5e-f385-426b-9bd1-0bc297bdcc61"
+      }
     }
   },
   "name": "Pady"

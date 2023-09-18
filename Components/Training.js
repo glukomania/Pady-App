@@ -10,7 +10,7 @@ import { LevelWon } from './Gameplay/LevelWon'
 import { examples } from '../data/examples.js'
 import { rules } from '../data/rules.js'
 import { useNavigation } from '@react-navigation/native'
-import Purchases from 'react-native-purchases'
+// import Purchases from 'react-native-purchases'
 
 const Stack = createNativeStackNavigator()
 
@@ -119,20 +119,20 @@ export const Training = (props) => {
 
   useEffect(() => {
     console.log('==== Trainng screen is started ======')
-    const revenueCatInit = async () => {
-      Purchases.setDebugLogsEnabled(true)
+    // const revenueCatInit = async () => {
+    //   Purchases.setDebugLogsEnabled(true)
 
-      if (Platform.OS === 'ios') {
-        await Purchases.configure({ apiKey: 'appl_mxIogORnjOEasSfQYoKMVAiEHSR' })
-        console.log('iOS? Gooood!')
-        setIsSubsModalOpen(true)
-      } else if (Platform.OS === 'android') {
-        console.log('Android?? Who ever need android??')
-        // await Purchases.configure({ apiKey: 'public_google_sdk_key' })
-      }
-    }
+    //   if (Platform.OS === 'ios') {
+    //     await Purchases.configure({ apiKey: 'appl_mxIogORnjOEasSfQYoKMVAiEHSR' })
+    //     console.log('iOS? Gooood!')
+    //     setIsSubsModalOpen(true)
+    //   } else if (Platform.OS === 'android') {
+    //     console.log('Android?? Who ever need android??')
+    //     // await Purchases.configure({ apiKey: 'public_google_sdk_key' })
+    //   }
+    // }
 
-    revenueCatInit()
+    // revenueCatInit()
   }, [])
 
   useEffect(() => {
@@ -155,7 +155,7 @@ export const Training = (props) => {
         backgroundColor: '#fff',
       }}
     >
-      <Modal
+      {/* <Modal
         animationType="slide"
         transparent={true}
         visible={isSubsModalOpen}
@@ -249,7 +249,7 @@ export const Training = (props) => {
             <Text>logs are here</Text>
           </View>
         </View>
-      </Modal>
+      </Modal> */}
       <View style={{ width: '100%', height: '100%' }}>
         <Stack.Navigator>
           <Stack.Screen

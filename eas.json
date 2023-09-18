@@ -1,24 +1,31 @@
 {
-  "builds": {
-    "android": {
-      "release": {
-        "workflow": "generic"
+  "cli": {
+    "version": ">= 3.7.2"
+  },
+  "build": {
+    "development": {
+      "distribution": "internal",
+      "android": {
+        "gradleCommand": ":app:assembleDebug"
       },
-      "development": {
-        "developmentClient": true,
-        "distribution": "internal",
-        "workflow": "generic"
+      "ios": {
+        "buildConfiguration": "Debug",
+        "resourceClass": "m1-medium"
       }
     },
-    "ios": {
-      "release": {
-        "workflow": "generic"
-      },
-      "development": {
-        "developmentClient": true,
-        "distribution": "internal",
-        "workflow": "generic"
+    "preview": {
+      "distribution": "internal",
+      "ios": {
+        "resourceClass": "m1-medium"
+      }
+    },
+    "production": {
+      "ios": {
+        "resourceClass": "m1-medium"
       }
     }
+  },
+  "submit": {
+    "production": {}
   }
 }
